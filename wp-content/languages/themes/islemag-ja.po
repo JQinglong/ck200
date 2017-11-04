@@ -1,0 +1,1033 @@
+# Translation of Themes - IsleMag in Japanese
+# This file is distributed under the same license as the Themes - IsleMag package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-07-26 03:50:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Themes - IsleMag\n"
+
+#. Description of the plugin/theme
+msgid "A modern and clean free WordPress theme for tech magazines, news and newspaper media websites, personal fashion blogs, or photography, IsleMag is responsive, flat, minimalist, SEO friendly, Retina ready, built with Bootstrap, and has social links. Released in 2016, the theme has Google AdSense banners, a magazine homepage template, custom backgrounds, filtered categories, tags, boxed layout, and live customizer. IsleMag is WPML, Photo Gallery Grid,Contact Form 7,WP Product Review, SiteOrigin Page Builder, JetPack compatible, the theme is highly customizable and translation ready."
+msgstr "WordPress テーマ「アイルマグ (IsleMag)」は、技術系マガジン、ニュースメディアサイト、個人のファッションブログ、フォトグラフィなどに最適な最新のフリーテンプレートです。レスポンシブル対応、フラットデザイン、ミニマル、そして SEO まで考慮されています。Bootstrap を使用して、Retina にも対応し、SNS へのリンクも用意されています。2016年にリリースされたテーマとして、Google アドセンスのバナー、マガジンスタイルのテンプレート、カスタマイズ可能な背景、フィルター可能なカテゴリ、ユーザタグ、ボックスレイアウト、ライブカスタマイズなどにも対応しています。アイルマグは WPML, Photo Gallery Grid, Contact Form 7, WP Product Review, SiteOrigin Page Builder, JetPack などのプラグインにも対応しており、カスタマイズ性が高く、また、国際化にも対応しています。"
+
+#. Theme Name of the plugin/theme
+msgid "IsleMag"
+msgstr "IsleMag"
+
+#. translators: %s: post title
+#: inc/extras.php:75
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "「%s」への1件のフィードバック"
+
+#: inc/customizer.php:35
+msgid "Use a different custom template as frontpage?"
+msgstr "フロントページとは別のカスタムテンプレートを使用しますか ?"
+
+#: inc/class/islemag-info.php:54
+msgid "Leave a review"
+msgstr "レビューを残す"
+
+#: inc/class/islemag-info.php:46
+msgid "Demo"
+msgstr "デモ"
+
+#: inc/class/islemag-info.php:42
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: inc/customizer.php:464 inc/customizer.php:507
+msgid "Disable section"
+msgstr "セクションを無効にする"
+
+#: template-parts/content-single.php:133
+msgid "Post Author:"
+msgstr "投稿者: "
+
+#: inc/admin/welcome-screen/welcome-screen.php:202
+msgid "Changelog"
+msgstr "変更履歴"
+
+#: inc/admin/welcome-screen/welcome-screen.php:201
+msgid "Contribute"
+msgstr "貢献する"
+
+#: inc/admin/welcome-screen/welcome-screen.php:200
+msgid "Actions required"
+msgstr "アクションセンター"
+
+#: inc/class/islemag-info.php:50 inc/customizer.php:47
+msgid "View theme info"
+msgstr "テーマ情報を表示"
+
+#: inc/admin/welcome-screen/welcome-screen.php:65
+msgid "Get started with %s"
+msgstr "%sを使い始める"
+
+#: inc/admin/welcome-screen/welcome-screen.php:64
+msgid "Welcome! Thank you for choosing %s! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr "%sを選んでいただき、ありがとうございます。私たちの提供するテーマを最大限に生かしていただけるよう%swelcome page%sへアクセスしてください。"
+
+#: inc/admin/welcome-screen/sections/github.php:38
+msgid "Rate our theme on %sWordPress.org%s. We'd really appreciate it!"
+msgstr "%sWordPress.org%s でテーマを評価してください。心より感謝します。 "
+
+#: inc/admin/welcome-screen/sections/github.php:36
+msgid "Are you enjoying %s?"
+msgstr " %s は、いかがですか？"
+
+#: inc/admin/welcome-screen/sections/github.php:27
+msgid "Get involved at WordPress.org."
+msgstr "WordPress.org に参加する。"
+
+#: inc/admin/welcome-screen/sections/github.php:25
+msgid "Are you a polyglot? Want to translate %s into your own language?"
+msgstr "あなたはマルチリンガルですか？ %s をあなたの母国語に翻訳してくれませんか？"
+
+#: inc/admin/welcome-screen/sections/github.php:19
+msgid "%s on GitHub"
+msgstr "%s の GitHub"
+
+#: inc/admin/welcome-screen/sections/github.php:16
+msgid "GitHub is the place to go!"
+msgstr "GitHub でお待ちしています。"
+
+#: inc/admin/welcome-screen/sections/github.php:14
+msgid "Found a bug? Want to contribute with a fix or create a new feature?"
+msgstr "バグがありましたか ? 修正して協力していただけますか ? 新しい機能でも構いません。"
+
+#: inc/admin/welcome-screen/sections/github.php:9
+msgid "How can I contribute?"
+msgstr "どうすれば協力できますか ?"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:233
+msgid "Install Revive Old Post"
+msgstr "Revive Old Post のインストール"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:223
+msgid "A plugin to share about your old posts on twitter, facebook, linkedin to get more hits for them and keep them alive."
+msgstr "以前の投稿記事を Twitter、Facebook、LinkedIn でシェアすることで、古い記事でもアクセスを集められるよう甦らせるプラグインです。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:222
+msgid "Revive Old Post"
+msgstr "Revive Old Post"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:213
+msgid "Download Easy Content Types"
+msgstr "Easy Content Types のダウンロード"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:203
+msgid "Custom Post Types, Taxonomies and Metaboxes in Minutes"
+msgstr "このプラグインを使用すると、カテゴリー、ユーザータグやメタボックスを簡単に変更できます。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:202
+msgid "Easy Content Types"
+msgstr "Easy Content Types"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:193
+msgid "Install Visualizer"
+msgstr "Visualizer のインストール"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:183
+msgid "A simple, easy to use and quite powerful chart tool to create, manage and embed interactive charts into your WordPress posts and pages."
+msgstr "パワフルなチャート作成ツールで、WordPress の記事や固定ページへ埋め込むことも簡単にできます。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:182
+msgid "Visualizer: Charts and Graphs"
+msgstr "Visualizer: チャートやグラフ"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:171
+#: inc/admin/welcome-screen/sections/getting-started.php:252
+msgid "Install"
+msgstr "インストール"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:152
+msgid "Install Custom Login Customizer"
+msgstr "Custom Login Customizer のインストール"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:142
+msgid "Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! You can preview your changes before you save them!"
+msgstr "このプラグインで、WordPress のログインページを WordPress のカスタマイザーで簡単にデザイン変更ができます。保存前にプレビューもできます。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:141
+msgid "Custom Login Customizer"
+msgstr "Custom Login Customizer"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:131
+msgid "Install WP Product Review"
+msgstr "WP Product Review のインストール"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:121
+msgid "Easily turn your basic posts into in-depth reviews with ratings, pros and cons, affiliate links, rich snippets and user reviews."
+msgstr "通常の記事を、☆付きのレビュー、お勧め度、アフィリエイトリンク、抜粋、ユーザレビューなどへ簡単に変換します。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:120
+msgid "WP Product Review"
+msgstr "WP Product Review"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:110
+msgid "Install Page Builder by SiteOrigin"
+msgstr "Page Builder by SiteOrigin のインストール"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:104
+#: inc/admin/welcome-screen/sections/getting-started.php:125
+#: inc/admin/welcome-screen/sections/getting-started.php:146
+#: inc/admin/welcome-screen/sections/getting-started.php:165
+#: inc/admin/welcome-screen/sections/getting-started.php:187
+#: inc/admin/welcome-screen/sections/getting-started.php:207
+#: inc/admin/welcome-screen/sections/getting-started.php:227
+#: inc/admin/welcome-screen/sections/getting-started.php:246
+msgid "Already activated"
+msgstr "アクティベーション完了"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:100
+msgid "Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder."
+msgstr "このシンプルなページビルダーで、ウィジェット使用のレスポンシブ対応のページレイアウトがドラッグ & ドロップで作成できます。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:99
+msgid "Page Builder by SiteOrigin"
+msgstr "Page Builder by SiteOrigin"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:93
+msgid "Recommended plugins"
+msgstr "おすすめプラグイン"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:86
+msgid "Read full documentation"
+msgstr "すべてのドキュメンテーションを読む"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:85
+msgid "Need more details? Please check our full documentation for detailed information on how to use %s."
+msgstr "%sを使う方法を、もっと詳しく知るためには、ドキュメントを参照してください。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:84
+msgid "View full documentation"
+msgstr "ドキュメントの詳細を表示"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:70
+msgid "Read more"
+msgstr "続きを読む"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:69
+msgid " At the address below you will find a cool set of original WordPress plugins that can give you great benefits despite being a little lesser known out there."
+msgstr "以下のアドレスにて、あまり知られていないけれどとても有益な WordPerss のプラグインの組み合わせをご覧ください。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:68
+msgid "30 Experts Share: The Top *Non-Obvious* WordPress Plugins That'll Make You a Better Blogger"
+msgstr "30人のエキスパートによる、あなたを良いブロガーにするための、誰も語らなかった最高の WordPress プラグイン。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:63
+msgid "If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues."
+msgstr "もし、あなたのサイト表示が非常に遅いと感じた場合には、下記のドキュメントを参照してください。チェックすべき点といくつかの有効な解決策があります。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:62
+msgid "Speed up your site"
+msgstr "あなたのサイトをスピードアップ"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:55
+msgid "In the below documentation you will find an easy way to translate %s into your native language or any other language you need for you site."
+msgstr "下記のドキュメントには、%sをあなたの母国語やサイトで必要な他の言語に翻訳する簡単な方法があります。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:54
+#: inc/admin/welcome-screen/sections/github.php:30
+msgid "Translate %s"
+msgstr "%sを翻訳"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:49
+msgid "In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin."
+msgstr "下記のドキュメントには、このプラグインを使ってドラッグ＆ドロップだけで、最高のランディングページを、簡単に作成するための方法があります。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:48
+msgid "Build a landing page with a drag-and-drop content builder"
+msgstr "ドラッグ＆ドロップでランディングページを作成する"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:44
+#: inc/admin/welcome-screen/sections/getting-started.php:50
+#: inc/admin/welcome-screen/sections/getting-started.php:56
+#: inc/admin/welcome-screen/sections/getting-started.php:64
+#: inc/admin/welcome-screen/sections/getting-started.php:74
+msgid "View how to do this"
+msgstr "詳細を表示"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:43
+msgid "If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below."
+msgstr "テーマファイルを変更した場合には、次回アップデートで上書きされてしまいます。それらを避けるためには、子テーマを作成する必要があります。下記のドキュメントを参照してください。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:42
+msgid "Create a child theme"
+msgstr "子テーマを作成する"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:36
+msgid "FAQ"
+msgstr "よくある質問"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:28
+msgid "Go to Customizer"
+msgstr "カスタマイザーに進む"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:27
+msgid "Using the WordPress Customizer you can easily customize every aspect of the theme."
+msgstr "WordPress カスタマイザーを利用して、テーマのあらゆる側面を簡単にカスタマイズ可能です。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:26
+msgid "Customize everything in a single place."
+msgstr "一カ所ですべてのカスタマイズが行えます。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:24
+#: inc/admin/welcome-screen/welcome-screen.php:199
+msgid "Getting started"
+msgstr "ここから始めます。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:16
+msgid "We want to make sure you have the best experience using %s and that is why we gathered here all the necessary informations for you. We hope you will enjoy using %s, as much as we enjoy creating great products."
+msgstr "%s をご利用いただくと、WordPress における最高のテーマを、あなたにご体験いただけると確信しています。私たちが %s を制作するときに感じていたワクワクを、テーマを使うあなたにも是非、感じていただきたいと思います。"
+
+#: inc/admin/welcome-screen/sections/getting-started.php:15
+msgid "Our best free one page magazine WordPress theme, %s!"
+msgstr "現時点で最高のシングルページ・マガジンスタイル WordPress テーマ, %s!"
+
+#: inc/admin/welcome-screen/sections/actions-required.php:60
+#: inc/admin/welcome-screen/welcome-screen.php:103
+msgid "Hooray! There are no required actions for you right now."
+msgstr "現時点で行うことは何もありません。"
+
+#: inc/admin/welcome-screen/sections/actions-required.php:9
+msgid "Keep up with %s's latest news"
+msgstr "%sの最新記事を受け取る"
+
+#: functions.php:152
+msgid "Switch \"Front page displays\" to \"A static page\""
+msgstr "フロントページの表示から固定ページの表示へ切り替え"
+
+#: functions.php:153
+msgid "In order to have the one page look for your website, please go to Customize -> Static Front Page and switch \"Front page displays\" to \"A static page\". Then select the template \"Frontpage\" for that selected page."
+msgstr "Webサイトを1ページのサイトに見えるように変更するためには、[カスタマイズ]-->[固定・フロントページ]を選択して、\\\"最新の投稿\\\" から \\\"固定ページ\\\"へ切替えてください。固定ページを選択すると表示されるボックスから、どのページをフロントページとして表示するかを選択してください。"
+
+#: sidebar.php:41
+msgid "Banner Widget Example"
+msgstr "Banner Widget の例"
+
+#. translators: Widgets area editing link
+#: sidebar.php:28
+msgid "This is an example widget to show how the Sidebar looks by default. You can add custom widgets from the %1$swidgets screen%1$s in the admin. If custom widgets is added than this will be replaced by those widgets."
+msgstr "これはサイドバーがデフォルトでどのように見えるかを示すサンプルウィジェットです。管理画面の %1$swidgets screen%1$s からカスタムウィジェットを追加することができます。カスタムウィジェットが追加された場合、ここは差し替えられます。"
+
+#: sidebar.php:26
+msgid "Example Widget"
+msgstr "ウィジェット例"
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr "全幅"
+
+#: template-parts/content.php:93
+msgid "about "
+msgstr "紹介"
+
+#. translators: About title of the post
+#: template-parts/content.php:93
+msgid "Read more %s ..."
+msgstr "%sの続きを読む"
+
+#: template-parts/content-template2.php:76
+#: template-parts/content-template3.php:149
+#: template-parts/content-template3.php:211
+#: template-parts/content-template3.php:270
+#: template-parts/content-template4.php:81
+#: template-parts/content-template4.php:141
+msgid "Posted By"
+msgstr "投稿者"
+
+#: template-parts/content-template1.php:72
+#: template-parts/content-template2.php:61
+#: template-parts/content-template3.php:80
+#: template-parts/content-template3.php:135
+#: template-parts/content-template3.php:197
+#: template-parts/content-template3.php:256
+#: template-parts/content-template4.php:67
+#: template-parts/content-template4.php:127
+msgid "Rating:"
+msgstr "評価:"
+
+#: template-parts/content-single.php:269
+msgid "Read More"
+msgstr "続きを読む"
+
+#: template-parts/content-single.php:254
+msgid "Show more categories"
+msgstr "すべてのカテゴリを表示"
+
+#: template-parts/content-single.php:157
+msgid "Related Posts"
+msgstr "関連記事"
+
+#: template-parts/content-single.php:122
+msgid "by"
+msgstr "by"
+
+#: template-parts/content-single.php:120
+msgid "% Responses"
+msgstr "% 件の返信"
+
+#: template-parts/content-single.php:120
+msgid "One Response"
+msgstr "1件の返信"
+
+#: template-parts/content-single.php:120
+msgid "No Responses"
+msgstr "返信なし"
+
+#: template-parts/content-single.php:103
+msgid "Categories:"
+msgstr "カテゴリー:"
+
+#: template-parts/content-page.php:22 template-parts/content-search.php:86
+#: template-parts/content-single.php:90 template-parts/content.php:102
+msgid "Pages:"
+msgstr "ページ:"
+
+#: template-parts/content-none.php:48
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "お探しのコンテンツを見つけられませんでした。検索をお試しください。"
+
+#: template-parts/content-none.php:41
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "キーワードにマッチする結果はありません。キーワードを変えてお試しください。"
+
+#. translators: Add new post link
+#: template-parts/content-none.php:28
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "最初の投稿の準備はできましたか？ <a href=\"%1$s\">ここから開始します。</a>."
+
+#: template-parts/content-none.php:16
+msgid "Nothing Found"
+msgstr "何も見つかりません。"
+
+#: functions.php:758
+msgid "Ads Area 5"
+msgstr "広告エリア5"
+
+#: functions.php:753
+msgid "Ads Area 4"
+msgstr "広告エリア4"
+
+#: functions.php:747
+msgid "Ads Area 3"
+msgstr "広告エリア3"
+
+#: functions.php:742
+msgid "Ads Area 2"
+msgstr "広告エリア2"
+
+#: functions.php:737
+msgid "Ads Area 1"
+msgstr "広告エリア1"
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search in here..."
+msgstr "こちらから検索..."
+
+#: searchform.php:11 searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr "検索:"
+
+#. translators: Search query
+#: search.php:30
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:78 template-parts/content-page.php:34
+msgid "Edit %s"
+msgstr "編集 %s"
+
+#: inc/template-tags.php:70
+msgid "% Comments"
+msgstr "%件のコメント"
+
+#: inc/template-tags.php:70
+msgid "Comment"
+msgstr "コメント"
+
+#: inc/template-tags.php:70
+msgid "Leave a comment"
+msgstr "コメントする"
+
+#. translators: tags list
+#: inc/template-tags.php:64
+msgid "Tagged: %1$s"
+msgstr "タグ: %1$s"
+
+#. translators: Categories list
+#: inc/template-tags.php:57
+msgid "Posted in: %1$s"
+msgstr "カテゴリー: %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:54 inc/template-tags.php:61
+msgid ", "
+msgstr "、"
+
+#. translators: Author link
+#: inc/template-tags.php:36
+msgctxt "post author"
+msgid "by %s"
+msgstr "投稿者: %s"
+
+#. translators: Posted date
+#: inc/template-tags.php:30
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "投稿日: %s"
+
+#: inc/customizer.php:632
+msgid "Socials title"
+msgstr "ソーシャルタイトル"
+
+#: inc/customizer.php:624
+msgid "Footer content"
+msgstr "フッターコンテンツ"
+
+#: inc/customizer.php:622
+msgid "Allowed HTML tags: <p>, <br>, <em>, <strong>, <ul>, <li>, <a>, <button>, <address>, <abbr>"
+msgstr "使用可能 HTML タグ: <p>, <br>, <em>, <strong>, <ul>, <li>, <a>, <button>, <address>, <abbr>"
+
+#: inc/customizer.php:614
+msgid "If not set, the footer logo will point to homepage url."
+msgstr "設定していない場合には、フッタロゴはトップページのURLへリンクされます。"
+
+#: inc/customizer.php:613
+msgid "Footer logo link"
+msgstr "フッターロゴリンク"
+
+#: inc/customizer.php:604
+msgid "Footer logo"
+msgstr "フッターロゴ"
+
+#: inc/customizer.php:595
+msgid "If you check this box, the thumbnail will disappear from single page."
+msgstr "このチェックボックスをONにすると記事ページでアイキャッチ画像が非表示になります。"
+
+#: inc/customizer.php:594
+msgid "Hide post thumbnail on single page?"
+msgstr "記事ページでアイキャッチ画像を非表示"
+
+#: inc/customizer.php:585
+msgid "If you check this box, related posts will disappear from single page."
+msgstr "このチェックボックスをONにすると関連記事は非表示になります。"
+
+#: inc/customizer.php:584
+msgid "Hide related posts?"
+msgstr "関連記事を非表示"
+
+#: inc/customizer.php:575
+msgid "If you check this box, the author's description will disappear from single page."
+msgstr "このチェックボックスをONにすると、記事ページで投稿者の詳細が非表示になります。"
+
+#: inc/customizer.php:574
+msgid "Hide author's description?"
+msgstr "投稿者の詳細を非表示"
+
+#: inc/customizer.php:558
+msgid "Number of posts in each slide"
+msgstr "各スライダーの記事数"
+
+#: inc/customizer.php:517
+msgid "If you check this box and you have a sidebar, the section will be displayed after the sidebar"
+msgstr "このチェックボックスをONにするとサイドバーを使えます。セクションはサイドバーの後に表示されます。"
+
+#: inc/customizer.php:516
+msgid "Full width section"
+msgstr "最大幅セクション"
+
+#: inc/customizer.php:492 inc/customizer.php:544
+msgid "To display all posts, set this field to -1."
+msgstr "すべての記事を表示するには、このフィールドへ-1を入力します。"
+
+#: inc/customizer.php:491 inc/customizer.php:543
+msgid "Number of posts in this section"
+msgstr "このセクションの記事数"
+
+#: inc/customizer.php:473 inc/customizer.php:534
+#: template-parts/content-template3.php:42
+#: template-parts/content-template3.php:110
+#: template-parts/content-template3.php:171
+#: template-parts/content-template3.php:230
+#: template-parts/content-template4.php:41
+#: template-parts/content-template4.php:101
+msgid "Category"
+msgstr "カテゴリー"
+
+#: inc/customizer.php:455
+msgid "Disable sticky menu"
+msgstr "スティッキーメニュー停止"
+
+#: inc/customizer.php:443 inc/customizer.php:641
+msgid "Add new social icon"
+msgstr "新規ソーシャルアイコン追加"
+
+#: inc/customizer.php:433
+msgid "Section's posts text color"
+msgstr "セクションの記事テキストカラー"
+
+#: inc/customizer.php:423
+msgid "Section's posts title color"
+msgstr "セクションの記事タイトルカラー"
+
+#: inc/customizer.php:413
+msgid "Top slider's posts text color"
+msgstr "トップ・スライダーの記事テキストカラー"
+
+#: inc/customizer.php:403
+msgid "Top slider's posts title color"
+msgstr "トップ・スライダーの記事タイトルカラー"
+
+#: inc/customizer.php:393
+msgid "Title color"
+msgstr "タイトルカラー"
+
+#: inc/customizer.php:161
+msgid "Single post settings"
+msgstr "個別投稿設定"
+
+#: functions.php:757 inc/customizer.php:153 inc/customizer.php:285
+msgid "Section 5"
+msgstr "セクション5"
+
+#: functions.php:752 inc/customizer.php:145 inc/customizer.php:275
+msgid "Section 4"
+msgstr "セクション4"
+
+#: functions.php:746 inc/customizer.php:137 inc/customizer.php:272
+msgid "Section 3"
+msgstr "セクション3"
+
+#: functions.php:741 inc/customizer.php:129 inc/customizer.php:269
+msgid "Section 2"
+msgstr "セクション2"
+
+#: functions.php:736 inc/customizer.php:121 inc/customizer.php:266
+msgid "Section 1"
+msgstr "セクション1"
+
+#: inc/customizer.php:113
+msgid "Header slider"
+msgstr "ヘッダースライダー"
+
+#: inc/customizer.php:105
+msgid "Islemag header content"
+msgstr "アイルマグヘッダーコンテンツ"
+
+#: inc/customizer.php:104
+msgid "Header content"
+msgstr "ヘッダーコンテンツ"
+
+#: inc/customizer.php:96
+msgid "Header top bar"
+msgstr "ヘッダートップバー"
+
+#: inc/customizer.php:85
+msgid "Frontpage sections"
+msgstr "フロントページセクション"
+
+#: inc/customizer.php:77
+msgid "Header"
+msgstr "ヘッダー"
+
+#: inc/customizer.php:19
+msgid "Text color"
+msgstr "テキスト色"
+
+#: inc/class/islemag-widget-multiple-ads.php:155
+msgid "Recommended size: 125 x 125 px"
+msgstr "推奨サイズ: 125 x 125 px"
+
+#: inc/class/islemag-widget-content-ad.php:157
+msgid "234 x 60 px"
+msgstr "234 x 60 px"
+
+#: inc/class/islemag-widget-content-ad.php:156
+msgid "468 x 60 px"
+msgstr "468 x 60 px"
+
+#: inc/class/islemag-widget-content-ad.php:154
+msgid "728 x 90 px"
+msgstr "728 x 90 px"
+
+#: inc/class/islemag-widget-big-ad.php:248
+#: inc/class/islemag-widget-content-ad.php:220
+#: inc/class/islemag-widget-multiple-ads.php:240
+msgid "Code:"
+msgstr "コード:"
+
+#: inc/class/islemag-widget-big-ad.php:232
+#: inc/class/islemag-widget-content-ad.php:203
+#: inc/class/islemag-widget-multiple-ads.php:224
+msgid "Image:"
+msgstr "画像:"
+
+#: inc/class/islemag-widget-big-ad.php:223
+#: inc/class/islemag-widget-content-ad.php:192
+msgid "Open in new tab"
+msgstr "新規タブで開く"
+
+#: inc/class/islemag-widget-big-ad.php:183
+#: inc/class/islemag-widget-multiple-ads.php:183
+msgid "Alt Title"
+msgstr "代替タイトル"
+
+#: inc/class/islemag-widget-big-ad.php:178
+msgid "250 x 250 px"
+msgstr "250 x 250 px"
+
+#: inc/class/islemag-widget-big-ad.php:177
+msgid "300 x 600 px"
+msgstr "300 x 600 px"
+
+#: inc/class/islemag-widget-big-ad.php:176
+#: inc/class/islemag-widget-content-ad.php:155
+msgid "300 x 100 px"
+msgstr "300 x 100 px"
+
+#: inc/class/islemag-widget-big-ad.php:175
+msgid "300 x 250 px"
+msgstr "300 x 250 px"
+
+#: inc/class/islemag-widget-big-ad.php:174
+#: inc/class/islemag-widget-content-ad.php:153
+msgid "Recommended sizes:"
+msgstr "推奨サイズ:"
+
+#: inc/class/islemag-widget-big-ad.php:169
+#: inc/class/islemag-widget-content-ad.php:148
+#: inc/class/islemag-widget-multiple-ads.php:175
+msgid "Advertisement "
+msgstr "広告"
+
+#: inc/class/islemag-widget-big-ad.php:153
+#: inc/class/islemag-widget-multiple-ads.php:146 inc/customizer.php:525
+msgid "Title"
+msgstr "タイトル"
+
+#: inc/customizer-repeater/islemag-general-control.php:129
+msgid "Add new field"
+msgstr "フィールドの新規追加"
+
+#: inc/customizer-repeater/islemag-general-control.php:196
+#: inc/customizer-repeater/islemag-general-control.php:228
+msgid "Delete field"
+msgstr "フィールドを削除"
+
+#: inc/customizer-repeater/islemag-general-control.php:262
+msgid "Icon"
+msgstr "アイコン"
+
+#: inc/class/islemag-category-selector.php:37
+msgid "All"
+msgstr "すべて"
+
+#: inc/class/islemag-banner-control.php:112
+#: inc/class/islemag-banner-control.php:118
+msgid "Recomanded size: 728px x 90px"
+msgstr "推奨サイズ: 728px x 90px"
+
+#: inc/class/islemag-banner-control.php:85
+#: inc/class/islemag-banner-control.php:90
+#: inc/class/islemag-banner-control.php:122
+#: inc/class/islemag-banner-control.php:123
+#: inc/class/islemag-widget-big-ad.php:225
+#: inc/class/islemag-widget-content-ad.php:194
+#: inc/class/islemag-widget-multiple-ads.php:216
+#: inc/customizer-repeater/islemag-general-control.php:180
+#: inc/customizer-repeater/islemag-general-control.php:220
+msgid "Link"
+msgstr "リンク"
+
+#: inc/class/islemag-banner-control.php:83
+#: inc/class/islemag-banner-control.php:120
+msgid "Upload Image"
+msgstr "画像のアップロード"
+
+#: inc/class/islemag-banner-control.php:61
+#: inc/class/islemag-banner-control.php:113
+#: inc/class/islemag-widget-big-ad.php:250
+#: inc/class/islemag-widget-content-ad.php:222
+#: inc/class/islemag-widget-multiple-ads.php:243
+msgid "Text"
+msgstr "テキスト"
+
+#: inc/class/islemag-banner-control.php:60
+#: inc/class/islemag-banner-control.php:76
+msgid "Recommended size: 728px x 90px"
+msgstr "推奨サイズ: 728px x 90px"
+
+#: inc/class/islemag-banner-control.php:59
+#: inc/class/islemag-banner-control.php:111
+msgid "Banner Code"
+msgstr "バナーコード"
+
+#: inc/class/islemag-banner-control.php:50
+#: inc/class/islemag-banner-control.php:108
+msgid "Right"
+msgstr "右"
+
+#: inc/class/islemag-banner-control.php:49
+#: inc/class/islemag-banner-control.php:107
+msgid "Center"
+msgstr "中央"
+
+#: inc/class/islemag-banner-control.php:48
+#: inc/class/islemag-banner-control.php:106
+msgid "Left"
+msgstr "左"
+
+#: inc/class/islemag-banner-control.php:47
+#: inc/class/islemag-banner-control.php:105
+msgid "Banner position"
+msgstr "バナー位置"
+
+#: inc/class/islemag-banner-control.php:45
+#: inc/class/islemag-banner-control.php:103
+#: inc/class/islemag-widget-big-ad.php:205
+#: inc/class/islemag-widget-content-ad.php:174
+#: inc/class/islemag-widget-multiple-ads.php:205
+msgid "Code"
+msgstr "コード"
+
+#: inc/class/islemag-banner-control.php:44
+#: inc/class/islemag-banner-control.php:75
+#: inc/class/islemag-banner-control.php:102
+#: inc/class/islemag-banner-control.php:117
+#: inc/class/islemag-widget-big-ad.php:199
+#: inc/class/islemag-widget-content-ad.php:168
+#: inc/class/islemag-widget-multiple-ads.php:199
+msgid "Image"
+msgstr "画像"
+
+#: inc/class/islemag-banner-control.php:43
+#: inc/class/islemag-banner-control.php:101
+msgid "Banner type"
+msgstr "バナータイプ"
+
+#: header.php:70 header.php:175
+msgid "Skip to content"
+msgstr "コンテンツへ"
+
+#: header.php:69 header.php:174
+msgid "Menu"
+msgstr "メニュー"
+
+#: inc/extras.php:135
+msgid "Your comment is awaiting moderation."
+msgstr "あなたのコメントは認証中です。"
+
+#: inc/extras.php:117
+msgid "(Edit)"
+msgstr "(編集)"
+
+#. translators: 1- comment author link, 2 - comment date, 3 - comment time
+#: inc/extras.php:115
+msgid "<h4 class=\"media-heading\">%1$s</h4><span class=\"comment-date\">(%2$s - %3$s)</span>"
+msgstr "<h4 class=\"media-heading\">%1$s</h4><span class=\"comment-date\">(%2$s - %3$s)</span>"
+
+#: functions.php:368
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:367
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Lora, translate this to 'off'. Do not translate into your own language.
+#: functions.php:366
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:336
+msgid "collapse child menu"
+msgstr "サブメニューを閉じる"
+
+#: functions.php:335
+msgid "expand child menu"
+msgstr "サブメニューを展開"
+
+#: functions.php:286
+msgid "Footer area 3"
+msgstr "フッタエリア3"
+
+#: functions.php:283
+msgid "Footer area 2"
+msgstr "フッタエリア2"
+
+#: functions.php:280
+msgid "Footer area 1"
+msgstr "フッタエリア1"
+
+#. translators: Number of registered advertisment area
+#: functions.php:261
+msgid "Advertisments area %d"
+msgstr "広告エリア%d"
+
+#: functions.php:250
+msgid "Header advertisment area"
+msgstr "ヘッダー部の広告エリア"
+
+#: functions.php:238
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: functions.php:195
+msgid "Small Square"
+msgstr "正方形(小)"
+
+#: functions.php:194
+msgid "Vertical Rectangle"
+msgstr "長方形(縦並び)"
+
+#: functions.php:193
+msgid "Big Square"
+msgstr "正方形(大)"
+
+#: functions.php:192
+msgid "Half-page ad"
+msgstr "広告(半ページ)"
+
+#: functions.php:191
+msgid "Medium Rectangle"
+msgstr "長方形(中)"
+
+#: functions.php:190
+msgid "3:1 Rectangle"
+msgstr "3:1 長方形"
+
+#: functions.php:189
+msgid "Leaderboard"
+msgstr "リーダーボード"
+
+#: functions.php:188
+msgid "Small Advertisement"
+msgstr "広告(小)"
+
+#: functions.php:118
+msgid "Banner"
+msgstr "バナー"
+
+#: functions.php:69 inc/customizer.php:168
+msgid "Footer"
+msgstr "フッター"
+
+#: functions.php:68
+msgid "Primary"
+msgstr "メイン"
+
+#: functions.php:67
+msgid "Top"
+msgstr "トップ"
+
+#: inc/extras.php:57
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/customizer-repeater/islemag-general-control.php:56 inc/extras.php:56
+msgid "Islemag"
+msgstr "アイルマグ"
+
+#. translators: 1 - Theme name , 2 - WordPress link
+#: inc/extras.php:55
+msgid "%1$s powered by %2$s"
+msgstr "%1$s powered by %2$s"
+
+#: footer.php:91
+msgid "Widgets Area 3"
+msgstr "ウィジェットエリア3"
+
+#: footer.php:83
+msgid "Widgets Area 2"
+msgstr "ウィジェットエリア2"
+
+#: footer.php:75
+msgid "Widgets Area 1"
+msgstr "ウィジェットエリア1"
+
+#: comments.php:111
+msgid "Your Message"
+msgstr "メッセージ"
+
+#: comments.php:111
+msgctxt "noun"
+msgid "Comment"
+msgstr "コメント"
+
+#: comments.php:102 comments.php:103
+msgid "Website"
+msgstr "Webサイト"
+
+#: comments.php:95
+msgid "Your E-mail"
+msgstr "あなたのメールアドレス"
+
+#: comments.php:94
+msgid "Email"
+msgstr "メールアドレス"
+
+#: comments.php:86 comments.php:87
+msgid "Name"
+msgstr "氏名"
+
+#: comments.php:74
+msgid "Comments are closed."
+msgstr "コメントの受付は終了しました。"
+
+#: comments.php:36 comments.php:65
+msgid "Newer Comments"
+msgstr "新しいコメント"
+
+#: comments.php:35 comments.php:64
+msgid "Older Comments"
+msgstr "過去のコメント"
+
+#: comments.php:32 comments.php:61
+msgid "Comment navigation"
+msgstr "コメントナビ"
+
+#. translators: 1: number of comments, 2: post title
+#: inc/extras.php:79
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%2$s&rdquo;に対して%1$s件のコメント"
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
+
+#: 404.php:16
+msgid "Page Not Found"
+msgstr "ページが見つかりませんでした"
+
+#: 404.php:15
+msgid "404"
+msgstr "404"
+
+#. Author URI of the plugin/theme
+msgid "http://themeisle.com"
+msgstr "http://themeisle.com"
+
+#. Author of the plugin/theme
+msgid "Themeisle"
+msgstr "テーマアイル"
+
+#. Theme URI of the plugin/theme
+msgid "http://themeisle.com/themes/islemag/"
+msgstr "http://themeisle.com/themes/islemag/"
