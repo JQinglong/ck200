@@ -17,7 +17,7 @@ class WP_Pro_Customize_Control extends WP_Customize_Control {
 }
 $wp_customize->add_section( 'wallstreet_pro_section' , array(
 		'title'      => __('Upgrade to Pro', 'wallstreet'),
-		'priority'   => 1000,
+		'priority'   => 1100,
    	) );
 
 $wp_customize->add_setting(

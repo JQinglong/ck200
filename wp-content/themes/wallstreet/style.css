@@ -1,10 +1,10 @@
 /*
 * Theme Name: Wallstreet
-* Theme URI: http://webriti.com/wallstreet-lite-version-details-page/
+* Theme URI: https://webriti.com/wallstreet-lite-version-details-page/
 * Description: WallStreet is a Business WordPress Theme that contains many features for customizing your website as you need. Already, thousands of users are enjoying this theme because it is designed for multiple businesses like corporates, law firms, digital media agencies, architecture firms, personal blogs, portfolios and freelancer websites. The theme is developed using Bootstrap 3 CSS framework which makes it friendly for all devices such as mobiles, tablets, and laptops, etc. In WallStreet Lite, you can easily set a Featured Banner / Slide, Social Icons in the header, Contact Information, Services, Portfolio, and a 4-column widgetized footer. Several page templates are also added: Homepage and a Full Width page template. In the premium version, you will get 2 color skins (Lite and Dark), 10 predefined color schemes, a feature for creating your own custom color scheme, an eye-catching slider, and Services, Testimonials, Portfolio, Clients / Sponsors, Blog Layouts, Layout Manager and Latest News. You will also get various page templates including About, Services, Portfolio, Blog and Contact Us. The theme has support for popular plugins such as WPML, Polylang and JetPack Gallery Extensions. Just navigate to Appearance / Customize to start customizing. Both the lite and premium versions of WallStreet theme come with various locales. Check the premium version theme demo at http://webriti.com/demo/wp/wallstreet
-* Version: 1.7.7.4
+* Version: 1.7.8
 * Author: webriti
-* Author URI: http://www.webriti.com
+* Author URI: https://www.webriti.com
 * Tags: full-width-template, threaded-comments, right-sidebar, one-column, two-columns, custom-menu, sticky-post, translation-ready,featured-images, blog, portfolio, photography, food-and-drink, entertainment, education, blog, footer-widgets
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -83,7 +83,7 @@ body {
     line-height: 25px;
     padding-right: 7px;
 }
-
+.head-contact-info a{color:#fff;}
 /*Homepage Flex Slider Section--------------------------------------------------------------------------*/ 
 .homepage_mycarousel {
    height: 100%;
@@ -2518,12 +2518,27 @@ ul ul, ol ul, ul ol, ol ol {
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;}
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
 
+.no-js .some-element .screen-reader-text {
+    position: static;
+    -webkit-clip-path: none;
+    clip-path: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;

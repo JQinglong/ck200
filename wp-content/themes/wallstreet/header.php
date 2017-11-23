@@ -45,10 +45,10 @@
 			<?php if($current_options['contact_header_settings']==true) { ?>
 				<ul class="head-contact-info">
 					<?php if($current_options['contact_phone_number']!=''){ ?>
-					<li><i class="fa fa-phone-square"></i><?php echo esc_html( $current_options['contact_phone_number'] ); ?></li>
+					<li><i class="fa fa-phone-square"></i><?php echo $current_options['contact_phone_number']; ?></li>
 					<?php } ?>
 					<?php if($current_options['contact_email']!=''){ ?>
-					<li><i class="fa fa-envelope"></i><?php echo sanitize_email( $current_options['contact_email'] ); ?></li>
+					<li><i class="fa fa-envelope"></i><?php echo  $current_options['contact_email']; ?></li>
 					<?php } ?>			
 				</ul>
 			<?php } ?>

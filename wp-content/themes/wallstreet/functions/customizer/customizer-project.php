@@ -280,7 +280,7 @@ function wallstreet_project_customizer( $wp_customize ) {
 	
 	
 	$wp_customize->add_section( 'more_project' , array(
-		'title'      => __('Add More Project', 'wallstreet'),
+		'title'      => __('Add More Projects', 'wallstreet'),
 		'panel'  => 'wallstreet_project_setting',
 		'priority'   => 400,
    	) );

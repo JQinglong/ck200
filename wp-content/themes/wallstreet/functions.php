@@ -27,6 +27,9 @@
 	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-client.php');
 	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-template.php');
 	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-typography.php');
+	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-help.php');
+	
+	
 	
 	
 	
@@ -247,6 +250,12 @@ function wallstreet_register_required_plugins() {
             'slug'      => 'facebook-feed',
             'required'  => false,
         ),
+		array(
+            'name'      => 'Easy Testimonials Plugin By Webriti',
+            'slug'      => 'wp-easy-testimonial',
+            'required'  => false,
+        )
+		
 
 	);
 

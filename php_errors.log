@@ -1133,3 +1133,321 @@
 [04-Nov-2017 18:53:37 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
 [04-Nov-2017 18:53:37 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
 [04-Nov-2017 18:53:37 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 19:58:59 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 19:58:59 UTC] PHP Stack trace:
+[04-Nov-2017 19:58:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 19:58:59 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 19:58:59 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 19:58:59 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 19:58:59 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:58:59 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:58:59 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 19:58:59 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 19:58:59 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 19:58:59 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:58:59 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:58:59 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 19:59:19 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 19:59:19 UTC] PHP Stack trace:
+[04-Nov-2017 19:59:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 19:59:19 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 19:59:19 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 19:59:19 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 19:59:19 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:19 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:19 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 19:59:19 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 19:59:19 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 19:59:19 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:19 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:19 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 19:59:49 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 19:59:49 UTC] PHP Stack trace:
+[04-Nov-2017 19:59:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 19:59:49 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 19:59:49 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 19:59:49 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 19:59:49 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:49 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:49 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 19:59:49 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 19:59:49 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 19:59:49 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:49 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 19:59:49 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:06:16 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:06:16 UTC] PHP Stack trace:
+[04-Nov-2017 20:06:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:06:16 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:06:16 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:06:16 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:06:16 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:06:16 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:06:16 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:06:16 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:06:16 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:06:16 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:06:16 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:06:16 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:16:38 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:16:38 UTC] PHP Stack trace:
+[04-Nov-2017 20:16:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:16:38 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:16:38 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:16:38 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:16:38 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:16:38 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:16:38 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:16:38 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:16:38 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:16:38 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:16:38 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:16:38 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:17:52 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:17:52 UTC] PHP Stack trace:
+[04-Nov-2017 20:17:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:17:52 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:17:52 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:17:52 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:17:52 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:17:52 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:17:52 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:17:52 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:17:52 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:17:52 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:17:52 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:17:52 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:18:22 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:18:22 UTC] PHP Stack trace:
+[04-Nov-2017 20:18:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:18:22 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:18:22 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:18:22 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:18:22 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:18:22 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:18:22 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:18:22 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:18:22 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:18:22 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:18:22 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:18:22 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:19:53 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:19:53 UTC] PHP Stack trace:
+[04-Nov-2017 20:19:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:19:53 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:19:53 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:19:53 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:19:53 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:19:53 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:19:53 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:19:53 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:19:53 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:19:53 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:19:53 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:19:53 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:33:39 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:33:39 UTC] PHP Stack trace:
+[04-Nov-2017 20:33:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:33:39 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:33:39 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:33:39 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:33:39 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:33:39 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:33:39 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:33:39 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:33:39 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:33:39 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:33:39 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:33:39 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:34:19 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:34:19 UTC] PHP Stack trace:
+[04-Nov-2017 20:34:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:34:19 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:34:19 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:34:19 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:34:19 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:34:19 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:34:19 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:34:19 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:34:19 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:34:19 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:34:19 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:34:19 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:35:51 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:35:51 UTC] PHP Stack trace:
+[04-Nov-2017 20:35:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:35:51 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:35:51 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:35:51 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:35:51 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:35:51 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:35:51 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:35:51 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:35:51 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:35:51 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:35:51 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:35:51 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:36:10 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:36:10 UTC] PHP Stack trace:
+[04-Nov-2017 20:36:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:36:10 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:36:10 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:36:10 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:36:10 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:36:10 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:36:10 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:36:10 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:36:10 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:36:10 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:36:10 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:36:10 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:43:13 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:43:13 UTC] PHP Stack trace:
+[04-Nov-2017 20:43:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:43:13 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:43:13 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:43:13 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:43:13 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:43:13 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:43:13 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:43:13 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:43:13 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:43:13 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:43:13 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:43:13 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:44:57 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:44:57 UTC] PHP Stack trace:
+[04-Nov-2017 20:44:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:44:57 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:44:57 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:44:57 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:44:57 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:44:57 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:44:57 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:44:57 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:44:57 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:44:57 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:44:57 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:44:57 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:47:19 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:47:19 UTC] PHP Stack trace:
+[04-Nov-2017 20:47:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:47:19 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:47:19 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:47:19 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:47:19 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:19 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:19 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:47:19 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:47:19 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:47:19 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:19 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:19 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:47:52 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:47:52 UTC] PHP Stack trace:
+[04-Nov-2017 20:47:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:47:52 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:47:52 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:47:52 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:47:52 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:52 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:52 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:47:52 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:47:52 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:47:52 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:52 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:47:52 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:48:32 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:48:32 UTC] PHP Stack trace:
+[04-Nov-2017 20:48:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:48:32 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:48:32 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:48:32 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:48:32 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:48:32 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:48:32 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:48:32 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:48:32 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:48:32 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:48:32 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:48:32 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:50:22 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:50:22 UTC] PHP Stack trace:
+[04-Nov-2017 20:50:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/customize.php:0
+[04-Nov-2017 20:50:22 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/customize.php:128
+[04-Nov-2017 20:50:22 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:50:22 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:50:22 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:50:22 UTC] PHP   6. WP_Customize_Widgets->print_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:50:22 UTC] PHP   7. do_action() /home/ubuntu/workspace/wp-includes/class-wp-customize-widgets.php:676
+[04-Nov-2017 20:50:22 UTC] PHP   8. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:50:22 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:50:22 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:50:22 UTC] PHP  11. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:50:22 UTC] PHP  12. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:52:56 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:52:56 UTC] PHP Stack trace:
+[04-Nov-2017 20:52:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[04-Nov-2017 20:52:56 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[04-Nov-2017 20:52:56 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:472
+[04-Nov-2017 20:52:56 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:118
+[04-Nov-2017 20:52:56 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:52:56 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:52:56 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:52:56 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:52:56 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:53:12 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:53:12 UTC] PHP Stack trace:
+[04-Nov-2017 20:53:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[04-Nov-2017 20:53:12 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[04-Nov-2017 20:53:12 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:472
+[04-Nov-2017 20:53:12 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:118
+[04-Nov-2017 20:53:12 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:53:12 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:53:12 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:53:12 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:53:12 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[04-Nov-2017 20:55:54 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[04-Nov-2017 20:55:54 UTC] PHP Stack trace:
+[04-Nov-2017 20:55:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[04-Nov-2017 20:55:54 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[04-Nov-2017 20:55:54 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:472
+[04-Nov-2017 20:55:54 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:118
+[04-Nov-2017 20:55:54 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[04-Nov-2017 20:55:54 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[04-Nov-2017 20:55:54 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:55:54 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[04-Nov-2017 20:55:54 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[05-Nov-2017 10:39:47 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[05-Nov-2017 10:39:47 UTC] PHP Stack trace:
+[05-Nov-2017 10:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[05-Nov-2017 10:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[05-Nov-2017 10:39:47 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:472
+[05-Nov-2017 10:39:47 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:118
+[05-Nov-2017 10:39:47 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[05-Nov-2017 10:39:47 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[05-Nov-2017 10:39:47 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[05-Nov-2017 10:39:47 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[05-Nov-2017 10:39:47 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[05-Nov-2017 10:40:00 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[05-Nov-2017 10:40:00 UTC] PHP Stack trace:
+[05-Nov-2017 10:40:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[05-Nov-2017 10:40:00 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[05-Nov-2017 10:40:00 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:472
+[05-Nov-2017 10:40:00 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:118
+[05-Nov-2017 10:40:00 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[05-Nov-2017 10:40:00 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[05-Nov-2017 10:40:00 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[05-Nov-2017 10:40:00 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[05-Nov-2017 10:40:00 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429
+[18-Nov-2017 06:43:49 UTC] PHP Warning:  Missing argument 1 for lsi_Widget::enqueue_admin_scripts(), called in /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php on line 429 and defined in /home/ubuntu/workspace/wp-content/plugins/lightweight-social-icons/lightweight-social-icons.php on line 371
+[18-Nov-2017 06:43:49 UTC] PHP Stack trace:
+[18-Nov-2017 06:43:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[18-Nov-2017 06:43:49 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[18-Nov-2017 06:43:49 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:472
+[18-Nov-2017 06:43:49 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:118
+[18-Nov-2017 06:43:49 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2017 06:43:49 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[18-Nov-2017 06:43:49 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[18-Nov-2017 06:43:49 UTC] PHP   8. SiteOrigin_Panels_Admin->enqueue_admin_scripts() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[18-Nov-2017 06:43:49 UTC] PHP   9. lsi_Widget->enqueue_admin_scripts() /home/ubuntu/workspace/wp-content/plugins/siteorigin-panels/inc/admin.php:429

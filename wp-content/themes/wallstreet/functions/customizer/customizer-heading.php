@@ -37,7 +37,7 @@ function wallstreet_template_customizer( $wp_customize ) {
 		array('capability'  => 'edit_theme_options',
 		'default' => '1-800-123-789', 
 		'type' => 'option',
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'wallstreet_home_page_sanitize_text',
 		));
 
 	$wp_customize->add_control(
@@ -55,7 +55,7 @@ function wallstreet_template_customizer( $wp_customize ) {
 		array('capability'  => 'edit_theme_options',
 		'default' => 'info@webriti.com', 
 		'type' => 'option',
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'wallstreet_home_page_sanitize_text',
 		));
 
 	$wp_customize->add_control(
@@ -184,4 +184,10 @@ function wallstreet_template_customizer( $wp_customize ) {
 	
 	}
 	add_action( 'customize_register', 'wallstreet_template_customizer' );
+	
+	function wallstreet_home_page_sanitize_text( $input ) {
+
+			return wp_kses_post( force_balance_tags( $input ) );
+
+	}
 	?>

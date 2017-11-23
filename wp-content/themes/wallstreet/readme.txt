@@ -51,6 +51,18 @@ Site Title and its description in not shown on home page besides this both are u
 Support
 -------
 Do you enjoy this theme? Send your ideas - issues - on the theme formn . Thank you!
+@Version 1.7.8
+1. Update screen reader css.
+@Version 1.7.7.9
+1. Make a top header part with html support.
+@Version 1.7.7.8
+1. Recommended Easy Testimonials Plugin By Webriti.
+@Version 1.7.7.7
+1. Theme URI & Author URI Updated.
+@Version 1.7.7.6
+1. Update Strings (Suggest by Transifix) 
+@Version 1.7.7.5
+1. Added Help link in customize setting.
 @Version 1.7.7.4
 1. Update theme documentation link.
 @Version 1.7.7.3

@@ -73,7 +73,13 @@ font-size:14px !important;
 
 #accordion-section-wallstreet_pro_section .accordion-section-title, #accordion-section-wallstreet_pro_section .accordion-section-title:hover  { background: #00c2a9 !important; color:#fff !important; }
 
-#accordion-section-wallstreet_pro_section .accordion-section-title:after, #accordion-section-wallstreet_pro_section .accordion-section-title:after {color:#fff !important; }
+#accordion-section-wallstreet_pro_section .accordion-section-title:after, #accordion-section-wallstreet_pro_section .accordion-section-title:after, #accordion-section-wallstreet_help_section .accordion-section-title:after {color:#fff !important; }
 
 #accordion-section-wallstreet_pro_section .accordion-section-title, #accordion-section-wallstreet_pro_section .accordion-section-title:hover { background: #00c2a9 !important; color:#fff !important; }
+
+#accordion-section-wallstreet_help_section .accordion-section-title { background: #00c2a9 !important; color:#fff !important; }
+
+#accordion-section-wallstreet_help_section .accordion-section-title, #accordion-section-wallstreet_help_section .accordion-section-title:hover { background: #00c2a9 !important; color:#fff !important; }
+
+
  
