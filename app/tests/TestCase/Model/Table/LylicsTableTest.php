@@ -26,7 +26,8 @@ class LylicsTableTest extends TestCase
     public $fixtures = [
         'app.lylics',
         'app.musics',
-        'app.singers'
+        'app.singers',
+        'app.music_hskcounts'
     ];
 
     /**

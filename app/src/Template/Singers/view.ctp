@@ -39,6 +39,8 @@
                 <th scope="col"><?= __('Music Nm') ?></th>
                 <th scope="col"><?= __('Lylics') ?></th>
                 <th scope="col"><?= __('Singer Id') ?></th>
+                <th scope="col"><?= __('Cnt Lylics') ?></th>
+                <th scope="col"><?= __('Cnt Dist') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($singer->musics as $musics): ?>
@@ -47,6 +49,8 @@
                 <td><?= h($musics->music_nm) ?></td>
                 <td><?= h($musics->lylics) ?></td>
                 <td><?= h($musics->singer_id) ?></td>
+                <td><?= h($musics->cnt_lylics) ?></td>
+                <td><?= h($musics->cnt_dist) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Musics', 'action' => 'view', $musics->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Musics', 'action' => 'edit', $musics->id]) ?>

@@ -18,7 +18,8 @@ class SingersControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.singers',
         'app.musics',
-        'app.lylics'
+        'app.lylics',
+        'app.music_hskcounts'
     ];
 
     /**

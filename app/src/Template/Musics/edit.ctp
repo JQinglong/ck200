@@ -27,6 +27,8 @@
             echo $this->Form->input('music_nm');
             echo $this->Form->input('lylics');
             echo $this->Form->input('singer_id', ['options' => $singers]);
+            echo $this->Form->input('cnt_lylics');
+            echo $this->Form->input('cnt_dist');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

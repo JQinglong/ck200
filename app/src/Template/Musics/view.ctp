@@ -31,6 +31,14 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($music->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Cnt Lylics') ?></th>
+            <td><?= $this->Number->format($music->cnt_lylics) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Cnt Dist') ?></th>
+            <td><?= $this->Number->format($music->cnt_dist) ?></td>
+        </tr>
     </table>
     <div class="row">
         <h4><?= __('Lylics') ?></h4>

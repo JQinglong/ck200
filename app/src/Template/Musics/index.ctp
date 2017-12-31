@@ -21,6 +21,8 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('music_nm') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('singer_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('cnt_lylics') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('cnt_dist') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -30,6 +32,8 @@
                 <td><?= $this->Number->format($music->id) ?></td>
                 <td><?= h($music->music_nm) ?></td>
                 <td><?= $music->has('singer') ? $this->Html->link($music->singer->id, ['controller' => 'Singers', 'action' => 'view', $music->singer->id]) : '' ?></td>
+                <td><?= $this->Number->format($music->cnt_lylics) ?></td>
+                <td><?= $this->Number->format($music->cnt_dist) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $music->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $music->id]) ?>

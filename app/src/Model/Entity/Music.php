@@ -9,6 +9,8 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $music_nm
  * @property int $singer_id
+ * @property int $cnt_lylics
+ * @property int $cnt_dist
  *
  * @property \App\Model\Entity\Lylic[] $lylics
  * @property \App\Model\Entity\Singer $singer

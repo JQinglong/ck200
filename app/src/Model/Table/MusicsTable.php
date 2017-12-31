@@ -11,6 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \Cake\ORM\Association\BelongsTo $Singers
  * @property \Cake\ORM\Association\HasMany $Lylics
+ * @property \Cake\ORM\Association\HasMany $MusicHskcounts
  *
  * @method \App\Model\Entity\Music get($primaryKey, $options = [])
  * @method \App\Model\Entity\Music newEntity($data = null, array $options = [])
@@ -44,6 +45,9 @@ class MusicsTable extends Table
         $this->hasMany('Lylics', [
             'foreignKey' => 'music_id'
         ]);
+        $this->hasMany('MusicHskcounts', [
+            'foreignKey' => 'music_id'
+        ]);
     }
 
     /**
@@ -64,6 +68,16 @@ class MusicsTable extends Table
         $validator
             ->requirePresence('lylics', 'create')
             ->notEmpty('lylics');
+
+        $validator
+            ->integer('cnt_lylics')
+            ->requirePresence('cnt_lylics', 'create')
+            ->notEmpty('cnt_lylics');
+
+        $validator
+            ->integer('cnt_dist')
+            ->requirePresence('cnt_dist', 'create')
+            ->notEmpty('cnt_dist');
 
         return $validator;
     }
