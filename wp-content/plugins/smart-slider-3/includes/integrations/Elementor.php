@@ -1,4 +1,5 @@
 <?php
+
 namespace Elementor;
 
 if (!defined('ABSPATH')) {
@@ -57,10 +58,10 @@ class Nextend_Widget_SmartSlider extends \Elementor\Widget_Base {
         ]);
 
         $this->add_control('smartsliderid', [
-            'label'   => 'Slider ID',
+            'label'   => 'Slider ID or Alias',
             'type'    => 'smartsliderfield',
             'default' => '',
-            'title'   => 'Slider ID',
+            'title'   => 'Slider ID or Alias',
         ]);
 
         $this->end_controls_section();
@@ -71,7 +72,12 @@ class Nextend_Widget_SmartSlider extends \Elementor\Widget_Base {
         if (\Elementor\Plugin::instance()->editor->is_edit_mode() || \Elementor\Plugin::instance()->preview->is_preview_mode()) {
             echo \N2SS3Shortcode::renderIframe($this->get_settings('smartsliderid'));
         } else {
-            echo do_shortcode('[smartslider3 slider=' . $this->get_settings('smartsliderid') . ']');
+            $sliderIDorAlias = $this->get_settings('smartsliderid');
+            if(is_numeric($sliderIDorAlias)) {
+	            echo do_shortcode( '[smartslider3 slider=' . $sliderIDorAlias . ']' );
+            }else{
+	            echo do_shortcode( '[smartslider3 alias="' . $sliderIDorAlias . '"]' );
+            }
         }
     }
 
@@ -80,7 +86,7 @@ class Nextend_Widget_SmartSlider extends \Elementor\Widget_Base {
     }
 
     protected function _content_template() {
-        echo \N2SS3Shortcode::renderIframe('{{{ settings.smartsliderid }}}');
+        echo \N2SS3Shortcode::renderIframe('{{{settings.smartsliderid}}}');
     }
 
 }
@@ -113,13 +119,11 @@ add_action('elementor/controls/controls_registered', function ($controls_manager
             <div class="elementor-control-field">
 			<label class="elementor-control-title">{{{ data.label }}}</label>
 			<div class="elementor-control-input-wrapper">
-                <a style="margin-bottom:10px;" href="#" onclick="return NextendSmartSliderSelectModal(jQuery(this).siblings('input'));" class="button button-primary elementor-button elementor-button-smartslider" title="Select slider">Select slider</a>
+                <a style="margin-bottom:10px;" href="#" onclick="<?php echo \SmartSlider3::sliderSelectAction("jQuery(this).siblings('input')"); ?>return false;" class="button button-primary elementor-button elementor-button-smartslider" title="Select slider">Select slider</a>
 				<input type="{{ data.input_type }}" title="{{ data.title }}" data-setting="{{ data.name }}""/>
 			</div>
 		</div>
-            <# if ( data.description ) { #>
-		<div class="elementor-control-field-description">{{{ data.description }}}</div>
-		<# } #>
+            <# if(data.controlValue == ''){NextendSmartSliderSelectModal(function(){return jQuery('[data-setting="smartsliderid"]')})} #>
             <?php
         }
 

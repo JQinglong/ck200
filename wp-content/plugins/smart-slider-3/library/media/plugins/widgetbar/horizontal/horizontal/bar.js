@@ -5,7 +5,7 @@ N2Require('SmartSliderWidgetBarHorizontal', [], [], function ($, scope, undefine
         this.slider = window[id];
 
         this.slider.started($.proxy(this.start, this, id, bars, parameters));
-    };
+    }
 
     SmartSliderWidgetBarHorizontal.prototype.start = function (id, bars, parameters) {
         if (this.slider.sliderElement.data('bar')) {
@@ -62,7 +62,7 @@ N2Require('SmartSliderWidgetBarHorizontal', [], [], function ($, scope, undefine
         }
 
         var event = 'click';
-        if (this.slider.parameters.controls.touch != '0' && this.slider.parameters.controls.touch) {
+        if (this.slider.hasTouch()) {
             event = 'n2click';
         }
 

@@ -134,8 +134,6 @@ abstract class N2SmartSliderAbstract {
 
     abstract public function parseSlider($slider);
 
-    abstract public function addCMSFunctions($slider);
-
     public function loadSliderParams() {
 
         $slidersModel = new N2SmartsliderSlidersModel();
@@ -287,7 +285,7 @@ abstract class N2SmartSliderAbstract {
             $slider = '<div class="n2-clear"></div>' . $slider;
         }
 
-        return "\n<!-- Nextend Smart Slider 3 #" . $this->sliderId . " - BEGIN -->\n" . $slider . "\n<!-- Nextend Smart Slider 3 #" . $this->sliderId . " - END -->\n";
+        return $slider;
     }
 
     public function addStaticSlide($slide) {
@@ -341,19 +339,20 @@ abstract class N2SmartSliderAbstract {
     }
 
     public function canDisplayOnCurrentDevice() {
-        $this->getSliderFromDB();
-        N2Loader::import('libraries.mobiledetect');
+        if($this->getSliderFromDB()) {
+	        N2Loader::import( 'libraries.mobiledetect' );
 
-        if (N2MobileDetect::$current['isMobile'] && $this->params->get('mobile', '1') == '0') {
-            return false;
-        }
+	        if ( N2MobileDetect::$current['isMobile'] && $this->params->get( 'mobile', '1' ) == '0' ) {
+		        return false;
+	        }
 
-        if (N2MobileDetect::$current['isTablet'] && $this->params->get('tablet', '1') == '0') {
-            return false;
-        }
+	        if ( N2MobileDetect::$current['isTablet'] && $this->params->get( 'tablet', '1' ) == '0' ) {
+		        return false;
+	        }
 
-        if (N2MobileDetect::$current['isDesktop'] && $this->params->get('desktop', '1') == '0') {
-            return false;
+	        if ( N2MobileDetect::$current['isDesktop'] && $this->params->get( 'desktop', '1' ) == '0' ) {
+		        return false;
+	        }
         }
 
         return true;

@@ -198,6 +198,16 @@ function wpcf7c_ajax_json_echo_step1( $items, $result ) {
 
 	if ( WPCF7_VERSION == '3.9' || WPCF7_VERSION == '3.9.1' ) {
 		$flag = $wpcf7_confflag;
+	} else if ( version_compare(WPCF7_VERSION, "5.0") >= 0 ) {
+		if($items['status'] == 'mail_sent' ) {
+			$items["message"]  = "";
+			$items["mailSent"] = false;
+			$items["status"] = 'wpcf7c_confirmed';
+	
+			unset( $items['captcha'] );
+			return $items;
+		}
+
 	} else if ( version_compare(WPCF7_VERSION, "4.8") >= 0 ) {
 		if($items['status'] == 'mail_sent' ) {
 			$flag = true;
@@ -221,13 +231,13 @@ function wpcf7c_ajax_json_echo_step1( $items, $result ) {
 		}
 
 		// オプションによる追加チェック
-		$form       = WPCF7_ContactForm::get_current();
+		/*$form       = WPCF7_ContactForm::get_current();
 		$on_confirm = $form->additional_setting( 'on_confirm', false );
 		if ( ! empty( $on_confirm ) ) {
 			foreach ( $on_confirm as $key => $on_confirm_func ) {
 				$items["onSubmit"][] = wpcf7_strip_quote( $on_confirm_func );
 			}
-		}
+		}*/
 
 
 		$items["message"]  = "";

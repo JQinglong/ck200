@@ -15,9 +15,14 @@ class SmartSlider3 {
             add_action('nextend_loaded', 'SmartSlider3::registerApplication');
         }
 
+        add_action('widgets_init', 'SmartSlider3::widgets_init', 11);
+        add_action('widgets_admin_page', 'SmartSlider3::widgets_admin_page');
+
         add_action('init', 'SmartSlider3::_init');
 
         add_action('init', 'SmartSlider3::preRender');
+
+        add_action('load-toplevel_page_' . NEXTEND_SMARTSLIDER_3_URL_PATH, 'SmartSlider3::removeEmoji');
 
         add_action('admin_menu', 'SmartSlider3::nextendAdminInit');
 
@@ -34,6 +39,10 @@ class SmartSlider3 {
         require_once dirname(NEXTEND_SMARTSLIDER_3__FILE__) . DIRECTORY_SEPARATOR . 'includes/widget.php';
         require_once dirname(NEXTEND_SMARTSLIDER_3__FILE__) . DIRECTORY_SEPARATOR . 'editor' . DIRECTORY_SEPARATOR . 'shortcode.php';
 
+        if (class_exists('acf', false)) {
+            require_once dirname(__FILE__) . '/integrations/acf.php';
+        }
+
         add_action('et_builder_ready', 'SmartSlider3::divi');
 
         add_action('vc_after_set_mode', 'SmartSlider3::visualComposer');
@@ -46,7 +55,6 @@ class SmartSlider3 {
 
         add_action('tailor_init', 'SmartSlider3::tailor');
 
-        add_filter('wpseo_xml_sitemap_post_url', 'SmartSlider3::wpseo_xml_sitemap_post_url', 10, 2);
         add_filter('fw_extensions_locations', 'SmartSlider3::unyson_extension');
 
         if (class_exists('MPCEShortcode', false)) {
@@ -58,9 +66,17 @@ class SmartSlider3 {
         }
     }
 
+    public static function removeEmoji() {
+
+        remove_action('wp_head', 'print_emoji_detection_script', 7);
+        remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    }
+
     public static function unyson_extension($locations) {
-        $path             = dirname(__FILE__) . '/integrations/unyson';
-        $locations[$path] = plugin_dir_url(__FILE__) . 'integrations/unyson';
+        if (version_compare(fw()->manifest->get_version(), '2.6.0', '>=')) {
+            $path             = dirname(__FILE__) . '/integrations/unyson';
+            $locations[$path] = plugin_dir_url(__FILE__) . 'integrations/unyson';
+        }
 
         return $locations;
     }
@@ -89,6 +105,40 @@ class SmartSlider3 {
         if (current_user_can('smartslider_edit') && intval(N2SmartSliderSettings::get('wp-adminbar', 1))) {
             add_action('admin_bar_menu', 'SmartSlider3::admin_bar_menu', 81);
         }
+
+        if (N2SmartSliderSettings::get('yoast-sitemap', 1)) {
+            add_filter('wpseo_xml_sitemap_post_url', 'SmartSlider3::wpseo_xml_sitemap_post_url', 10, 2);
+        }
+    }
+
+    public static function widgets_init() {
+        N2Loader::import('libraries.settings.settings', 'smartslider');
+        $widgetAreas = intval(N2SmartSliderSettings::get('wordpress-widget-areas', 1));
+        if ($widgetAreas > 0) {
+            for ($i = 1; $i <= $widgetAreas; $i++) {
+
+                register_sidebar(array(
+                    'name'          => 'Smart Slider Widget Area - #' . $i,
+                    'description'   => '',
+                    'id'            => 'smartslider_area_' . $i,
+                    'before_widget' => '',
+                    'after_widget'  => '',
+                    'before_title'  => '<div style="display:none;">',
+                    'after_title'   => '</div>',
+                ));
+            }
+        }
+    }
+
+    public static function widgets_admin_page() {
+        add_action('dynamic_sidebar_before', 'SmartSlider3::dynamic_sidebar_before');
+    }
+
+    public static function dynamic_sidebar_before($index) {
+        if (substr($index, 0, strlen('smartslider_area_')) === 'smartslider_area_') {
+            echo '<div class="description">Display this widget area in your theme with: <pre>&lt;?php dynamic_sidebar(\'' . $index . '\'); ?&gt;</pre></div>';
+        }
+
     }
 
     public static function preRender() {
@@ -290,7 +340,7 @@ class SmartSlider3 {
     }
 
     public static function beaverBuilder() {
-        require_once dirname(__FILE__) . '/integrations/BeaverBuilder.php';
+        require_once dirname(__FILE__) . '/integrations/beaver-builder/BeaverBuilder.php';
     }
 
     public static function tailor() {
@@ -367,6 +417,10 @@ class SmartSlider3 {
                 ));
             }
         }
+    }
+
+    public static function sliderSelectAction($jQueryNode) {
+        return 'NextendSmartSliderSelectModal(' . $jQueryNode . ');';
     }
 }
 

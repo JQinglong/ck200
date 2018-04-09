@@ -295,10 +295,11 @@ N2Require('Zoom', [], [], function ($, scope, undefined) {
 });
 N2Require('CreateSlider', [], [], function ($, scope, undefined) {
 
-    function CreateSlider(groupID, ajaxUrl) {
+    function CreateSlider(groupID, ajaxUrl, shouldSkipLicenseModal) {
         this.addToGroupModal = null;
         this.groupID = groupID;
         this.ajaxUrl = ajaxUrl;
+        this.shouldSkipLicenseModal = shouldSkipLicenseModal;
         $('.n2-ss-create-slider').click($.proxy(function (e) {
             e.preventDefault();
             e.stopImmediatePropagation();
@@ -490,7 +491,7 @@ N2Require('CreateSlider', [], [], function ($, scope, undefined) {
 });
 N2Require('ManageSliders', [], [], function ($, scope, undefined) {
 
-    function ManageSliders(groupID, ajaxUrl) {
+    function ManageSliders(groupID, ajaxUrl, shouldSkipLicenseModal) {
         this.preventSort = false;
         this.groupID = groupID;
         this.ajaxUrl = ajaxUrl;
@@ -510,7 +511,7 @@ N2Require('ManageSliders', [], [], function ($, scope, undefined) {
 
         this.initOrderable();
 
-        this.create = new scope.CreateSlider(groupID, ajaxUrl);
+        this.create = new scope.CreateSlider(groupID, ajaxUrl, shouldSkipLicenseModal);
         this.initBulk();
     }
 
@@ -3706,6 +3707,8 @@ N2Require('Generator', ['SlideAdmin'], ['smartSlider'], function ($, scope, smar
                 this.registerField($('#slidebackgroundAlt'));
                 this.registerField($('#slidebackgroundTitle'));
                 this.registerField($('#slidebackgroundVideoMp4'));
+				this.registerField($('#slidebackgroundColor'));
+				this.registerField($('#slidebackgroundColorEnd'));
                 this.registerField($('#linkslidelink_0'));
                 this.registerField($('#layergenerator-visible'));
                 this.registerField($('#layergroup-generator-visible'));
@@ -3764,7 +3767,10 @@ N2Require('Generator', ['SlideAdmin'], ['smartSlider'], function ($, scope, smar
             for (var i = 0; i < args.length; i++) {
                 args[i] = this.parseVariable(args[i]);
             }
-            return this[functionName].apply(this, args);
+            if (typeof this[functionName] === 'function') {
+                return this[functionName].apply(this, args);
+            }
+            return s;
         } else {
             return this.parseVariable(variable);
         }
@@ -3964,7 +3970,7 @@ N2Require('Generator', ['SlideAdmin'], ['smartSlider'], function ($, scope, smar
 
 
             content.append(NextendModal.prototype.createHeading(n2_('Choose the variable')));
-            var variableContainer = $('<div class="n2-variable-container" />').appendTo(content);
+            var variableContainer = $('<div class="n2-variable-container webkit-scroll-fix" />').appendTo(content);
 
             //content.append(NextendModal.prototype.createHeading('Functions'));
             var functionsContainer = $('<div class="n2-generator-functions-container n2-form-element-mixed" />')
@@ -4692,11 +4698,24 @@ N2Require('SlideSettings', ['SlideEditManager'], ['smartSlider'], function ($, s
             };
 
     SlideSettings.prototype.updateBackgroundColor = function () {
-        var backgroundColor = this.fields.backgroundColor.val(),
+        var backgroundColor = smartSlider.generator.fill(this.fields.backgroundColor.val()),
             gradient = this.fields.backgroundGradient.val();
+        if(backgroundColor.length && backgroundColor.charAt(0) == '#'){
+			backgroundColor = backgroundColor.substring(1);
+			if(backgroundColor.length == 6){
+				backgroundColor += 'ff';
+			}
+        }
         if (gradient != 'off') {
-            var backgroundColorEnd = this.fields.backgroundColorEnd.val(),
+            var backgroundColorEnd = smartSlider.generator.fill(this.fields.backgroundColorEnd.val()),
                 $slideMask = this.$slideMask.css({background: '', filter: ''});
+
+			if(backgroundColorEnd.length && backgroundColorEnd.charAt(0) == '#'){
+				backgroundColorEnd = backgroundColorEnd.substring(1);
+				if(backgroundColorEnd.length == 6){
+					backgroundColorEnd += 'ff';
+				}
+			}
 
             switch (gradient) {
                 case 'horizontal':
@@ -7707,6 +7726,12 @@ N2Require('PlacementAbsolute', ['PlacementAbstract'], ['smartSlider'], function 
     };
 
     PlacementAbsolute.prototype.deActivated = function (newMode) {
+
+        var value = this.layer.getProperty('parentid');
+        if (value && value != '') {
+            this.$layer.removeAttr('data-parentid');
+            this.unSubscribeParent();
+        }
 
         this.$layer
             .removeAttr('data-align')
@@ -11874,7 +11899,7 @@ N2Require('ContentAbstract', ['LayerContainer', 'ComponentAbstract'], ['smartSli
 
     ContentAbstract.prototype._syncbgThrottled = function () {
         var background = '',
-            image = this.getProperty('bgimage');
+            image = nextend.smartSlider.generator.fill(this.getProperty('bgimage'));
         if (image != '') {
             var x = parseInt(this.getProperty('bgimagex'));
             if (!isFinite(x)) {
@@ -11890,7 +11915,7 @@ N2Require('ContentAbstract', ['LayerContainer', 'ComponentAbstract'], ['smartSli
             gradient = this.getProperty('bgcolorgradient'),
             colorend = this.getProperty('bgcolorgradientend');
 
-        if (N2Color.hex2alpha(color) != 0 || (gradient != 'off' && N2Color.hex2alpha(colorend) != 0 )) {
+        if (N2Color.hex2alpha(color) != 0 || (gradient != 'off' && N2Color.hex2alpha(colorend) != 0)) {
             var after = '';
             if (background != '') {
                 after = ',' + background;
@@ -13193,54 +13218,56 @@ N2Require('Row', ['LayerContainer', 'ComponentAbstract'], ['smartSlider'], funct
     }
 
     Row.prototype._syncwrapafter = function () {
-        var wrapAfter = parseInt(this.getProperty('wrapafter')),
-            columns = this.getOrderedColumns(),
-            isWrapped = false;
+        if (!this.isDeleted && !this.isDeleteStarted) {
+            var wrapAfter = parseInt(this.getProperty('wrapafter')),
+                columns = this.getOrderedColumns(),
+                isWrapped = false;
 
-        for (var i = columns.length - 1; i >= 0; i--) {
-            if (!columns[i].showsOnCurrent) {
-                columns.splice(i, 1);
-            }
-        }
-
-        var length = columns.length;
-
-        if (wrapAfter > 0 && wrapAfter < length) {
-            isWrapped = true;
-        }
-
-        this.$row.find('> .n2-ss-row-break').remove();
-
-        this.$row.toggleClass('n2-ss-row-wrapped', isWrapped);
-
-        if (isWrapped) {
-            for (var i = 0; i < length; i++) {
-                var row = parseInt(i / wrapAfter);
-                columns[i].layer.attr('data-r', row);
-                if ((i + 1) % wrapAfter == 0 || i == length - 1) {
-                    var order = columns[i].getProperty('order');
-                    if (order == 0) order = 10;
-                    $('<div class="n2-ss-row-break"/>')
-                        .css('order', order)
-                        .insertAfter(columns[i].layer.addClass('n2-ss-last-in-row'));
-                } else {
-                    columns[i].layer.removeClass('n2-ss-last-in-row');
+            for (var i = columns.length - 1; i >= 0; i--) {
+                if (!columns[i].showsOnCurrent) {
+                    columns.splice(i, 1);
                 }
             }
-        } else {
-            for (var i = 0; i < length; i++) {
-                columns[i].layer
-                    .removeClass('n2-ss-last-in-row')
-                    .attr('data-r', 0);
-            }
-            if (columns.length > 0) {
-                columns[length - 1].layer.addClass('n2-ss-last-in-row');
-            } else {
-                console.error('The row does not have col.');
-            }
-        }
 
-        this.update();
+            var length = columns.length;
+
+            if (wrapAfter > 0 && wrapAfter < length) {
+                isWrapped = true;
+            }
+
+            this.$row.find('> .n2-ss-row-break').remove();
+
+            this.$row.toggleClass('n2-ss-row-wrapped', isWrapped);
+
+            if (isWrapped) {
+                for (var i = 0; i < length; i++) {
+                    var row = parseInt(i / wrapAfter);
+                    columns[i].layer.attr('data-r', row);
+                    if ((i + 1) % wrapAfter == 0 || i == length - 1) {
+                        var order = columns[i].getProperty('order');
+                        if (order == 0) order = 10;
+                        $('<div class="n2-ss-row-break"/>')
+                            .css('order', order)
+                            .insertAfter(columns[i].layer.addClass('n2-ss-last-in-row'));
+                    } else {
+                        columns[i].layer.removeClass('n2-ss-last-in-row');
+                    }
+                }
+            } else {
+                for (var i = 0; i < length; i++) {
+                    columns[i].layer
+                        .removeClass('n2-ss-last-in-row')
+                        .attr('data-r', 0);
+                }
+                if (columns.length > 0) {
+                    columns[length - 1].layer.addClass('n2-ss-last-in-row');
+                } else {
+                    console.error('The row does not have col.');
+                }
+            }
+
+            this.update();
+        }
     }
 
     Row.prototype.getOrderedColumns = function () {
@@ -13290,7 +13317,7 @@ N2Require('Row', ['LayerContainer', 'ComponentAbstract'], ['smartSlider'], funct
 
     Row.prototype._syncbgThrottled = function () {
         var background = '',
-            image = this.getProperty('bgimage');
+            image = nextend.smartSlider.generator.fill(this.getProperty('bgimage'));
         if (image != '') {
             var x = parseInt(this.getProperty('bgimagex'));
             if (!isFinite(x)) {
@@ -13641,7 +13668,8 @@ N2Require('ComponentSettings', [], ['smartSlider'], function ($, scope, smartSli
             bgcolorgradient: $('#layercontent-background-gradient'),
             bgcolorgradientend: $('#layercontent-background-color-end'),
             opened: $('#layercontent-opened')
-        }
+        };
+        smartSlider.generator.registerField(this.forms.component.content.bgimage);
 
         this.forms.component.row = {
             padding: $('#layerrow-padding'),
@@ -13660,7 +13688,8 @@ N2Require('ComponentSettings', [], ['smartSlider'], function ($, scope, smartSli
             borderradius: $('#layerrow-border-radius'),
             boxshadow: $('#layerrow-boxshadow'),
             opened: $('#layerrow-opened')
-        }
+        };
+        smartSlider.generator.registerField(this.forms.component.row.bgimage);
 
         this.forms.component.col = {
             maxwidth: $('#layercol-maxwidth'),
@@ -13682,8 +13711,10 @@ N2Require('ComponentSettings', [], ['smartSlider'], function ($, scope, smartSli
             bordercolor: $('#layercol-border-color'),
             opened: $('#layercol-opened'),
             colwidth: $('#layercol-colwidth'),
-            order: $('#layercol-order'),
-        }
+            order: $('#layercol-order')
+        };
+        smartSlider.generator.registerField($('#col-linklayercol-link_0'));
+        smartSlider.generator.registerField(this.forms.component.col.bgimage);
     }
 
     ComponentSettings.prototype.changeActiveComponent = function (layer, componentType, placementType, properties) {

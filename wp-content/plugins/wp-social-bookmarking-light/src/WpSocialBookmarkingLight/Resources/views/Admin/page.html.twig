@@ -52,7 +52,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">{{ 'Singular' | __ }}:</th>
+                        <th scope="row">{{ 'Individual Article' | __ }}:</th>
                         <td>
                             <select name='single_page'>
                                 <option value='true' {{ option.single_page == true ? 'selected' : '' }}>Yes</option>
@@ -61,7 +61,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">{{ 'Page' | __ }}:</th>
+                        <th scope="row">{{ 'Pages' | __ }}:</th>
                         <td>
                             <select name='is_page'>
                                 <option value='true' {{ option.is_page == true ? 'selected' : '' }}>Yes</option>
@@ -70,7 +70,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">{{ 'Services' | __ }}: <br/> <span style="font-size:10px">(drag-and-drop)</span></th>
+                        <th scope="row">{{ 'Enable Services' | __ }}: <br/> <span style="font-size:10px">(drag-and-drop)</span></th>
                         <td>
                             <input type="text" id='services_id' name='services' value="{{ option.services }}"size=120 style="font-size:12px;" onclick="this.select(0, this.value.length)" readonly/>
                             <br />
@@ -529,7 +529,7 @@
                                     "vi": "Vietnamese",
                                 } %}
                                 {% for key, value in google_langs %}
-                                    <option {{ option.google_plus_one.lang == key ? "selected" : "" }} value='{{ key }}'>{{ val }}</option>
+                                    <option {{ option.google_plus_one.lang == key ? "selected" : "" }} value='{{ key }}'>{{ value }}</option>
                                 {% endfor %}
                             </select>
                         </td>
@@ -560,7 +560,7 @@
                         <th scope="row">Button type:</th>
                         <td>
                             <select name='line_button_type' onchange='jQuery("#line_img").attr("src", "{{ "" | images }}/"+this.form.line_button_type.value+".png")'>
-                                {% set line_button_types = ['line20x20', 'line88x20'] %}
+                                {% set line_button_types = ['line20x20', 'line88x20', 'line80x20'] %}
                                 {% for button_type in line_button_types %}
                                     <option value='{{ button_type }}' {{ option.line.button_type == button_type ? 'selected' : '' }}>{{ button_type }}</option>
                                 {% endfor %}
@@ -603,8 +603,9 @@
                         <th scope="row">Type: <br> <span style="font-size:10px"></span></th>
                         <td>
                             <select name='pinterest_type'>
-                                <option value='all' {{ option.pinterest.type == 'all' ? 'selected' : '' }}>All</option>
-                                <option value='hover' {{ option.pinterest.type == 'hover' ? 'selected' : '' }}>Hover</option>
+                                <option value='all' {{ option.pinterest.type == 'all' ? 'selected' : '' }}>Any Image & Hover</option>
+                                <option value='any' {{ option.pinterest.type == 'any' ? 'selected' : '' }}>Any Image</option>
+                                <option value='hover' {{ option.pinterest.type == 'hover' ? 'selected' : '' }}>Image Hover</option>
                             </select>
                         </td>
                     </tr>
@@ -623,16 +624,6 @@
                             <select name='pinterest_size'>
                                 <option value='large' {{ option.pinterest.size == 'large' ? 'selected' : '' }}>Large</option>
                                 <option value='small' {{ option.pinterest.size == 'small' ? 'selected' : '' }}>Small</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Color: <br> <span style="font-size:10px"></span></th>
-                        <td>
-                            <select name='pinterest_color'>
-                                <option value='red' {{ option.pinterest.color == 'red' ? 'selected' : '' }}>Red</option>
-                                <option value='gray' {{ option.pinterest.color == 'gray' ? 'selected' : '' }}>Gray</option>
-                                <option value='white' {{ option.pinterest.color == 'white' ? 'selected' : '' }}>White</option>
                             </select>
                         </td>
                     </tr>

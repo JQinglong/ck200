@@ -64,10 +64,10 @@ class N2SmartSliderTypeSimple extends N2SmartSliderType {
                     echo N2Html::tag('div', array('class' => 'n2-ss-slide-backgrounds'));
 
                     foreach ($this->slider->slides AS $i => $slide) {
-                        echo N2Html::tag('div', $slide->attributes + array(
+                        echo N2Html::tag('div', N2HTML::mergeAttributes($slide->attributes, $slide->linkAttributes, array(
                                 'class' => 'n2-ss-slide n2-ss-canvas n2-ow ' . $slide->classes,
                                 'style' => $slide->style
-                            ), $slide->background . $slide->getHTML());
+                            )), $slide->background . $slide->getHTML());
                     }
                     ?>
                 </div>
@@ -192,7 +192,8 @@ class N2SmartSliderTypeSimple extends N2SmartSliderType {
                 'class'              => 'n2-ss-slider-background-video n2-ow',
                 'data-mode'          => $params->get('backgroundVideoMode', 'fill'),
                 'playsinline'        => 1,
-                'webkit-playsinline' => 1
+                'webkit-playsinline' => 1,
+                'data-keepplaying'   => 1
             ), N2Html::tag("source", array(
             "src"  => $mp4,
             "type" => "video/mp4"

@@ -5,7 +5,11 @@ class N2SmartsliderLicenseModel {
     private $key;
 
     public function __construct() {
-        $this->key = N2Base::getApplication('smartslider')->storage->get('license', 'key');
+		if(defined('SMART_SLIDER_LICENSE')){
+			$this->key = SMART_SLIDER_LICENSE;
+		} else {
+			$this->key = N2Base::getApplication('smartslider')->storage->get('license', 'key');
+		}
     
     }
 

@@ -5,7 +5,7 @@ class N2ModelsLink
 
     public static function search($keyword) {
 
-        $the_query = new WP_Query('posts_per_page=20&post_status=publish&s=' . $keyword);
+        $the_query = new WP_Query('post_type=any&posts_per_page=20&post_status=publish&s=' . $keyword);
 
         $links = array();
         if ($the_query->have_posts()) {

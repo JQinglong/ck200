@@ -153,7 +153,7 @@ if ( ! empty( $archive_content_classes ) ) {
 <div class="page-content">
 
 <h2 class="title-border title-bg-line pink mb30">
-	<span>曲を選択2</span>
+	<span>曲を選択</span>
 </h2>
 
 <form class="form-horizontal" name="contactform" role="form" method="post" action="" novalidate>
@@ -181,7 +181,7 @@ if ( ! empty( $archive_content_classes ) ) {
 </form>
 	
 <h2 class="title-border title-bg-line pink mb30">
-	<span>文章を入力2</span>
+	<span>文章を入力</span>
 </h2>
 <form class="form-horizontal" name="contactform" role="form" method="post" action="" novalidate>
 	<div class="form-group">

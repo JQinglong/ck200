@@ -1901,7 +1901,7 @@ class N2SmartSliderStorage {
             "id"           => 1015,
             'referencekey' => 1000,
             "value"        => array(
-                'name' => n2_('To bottom left'),
+                'name' => n2_('To top left'),
                 'data' => array(
                     'duration' => 5,
                     'strength' => array(
@@ -1916,7 +1916,7 @@ class N2SmartSliderStorage {
                     'to'       => array(
                         'scale' => 1.5,
                         'x'     => 100,
-                        'y'     => -100
+                        'y'     => 100
                     )
                 )
             )

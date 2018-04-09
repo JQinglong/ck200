@@ -14,6 +14,8 @@ class N2AssetsJs extends N2AssetsAbstract {
 
         $output = "";
 
+        $needProtocol = !N2Settings::get('protocol-relative', '1');
+
         $globalInline = $this->getGlobalInlineScripts();
         if (!empty($globalInline)) {
             $output .= N2Html::script(self::minify_js($globalInline . "\n"));
@@ -27,13 +29,13 @@ class N2AssetsJs extends N2AssetsAbstract {
             $jsCombined = new N2CacheCombine('js', N2Settings::get('minify-js', '0') ? 'N2MinifierJS::minify' : false);
             foreach ($this->getFiles() AS $file) {
                 if (basename($file) == 'n2.js') {
-                    $output .= N2Html::script('data:text/javascript;base64,' . n2_base64_encode(file_get_contents($file)), true) . "\n";
+                    $output .= N2Html::script(file_get_contents($file)) . "\n";
                 } else {
                     $jsCombined->add($file);
                 }
             }
             $combinedFile = $jsCombined->make();
-            $scripts      = 'nextend.loadScript("' . N2Uri::pathToUri($combinedFile, false) . '");';
+            $scripts      = 'nextend.loadScript("' . N2Uri::pathToUri($combinedFile, $needProtocol) . '");';
             $output .= N2Html::script(self::minify_js($scripts . "\n"));
         } else {
             if (!defined('NEXTEND_CACHE_STORAGE') && !N2Platform::$isAdmin && N2Settings::get('combine-js', '0')) {
@@ -46,14 +48,14 @@ class N2AssetsJs extends N2AssetsAbstract {
                 if (substr($combinedFile, 0, 2) == '//') {
                     $output .= N2Html::script($combinedFile, true) . "\n";
                 } else {
-                    $output .= N2Html::script(N2Uri::pathToUri($combinedFile, false), true) . "\n";
+                    $output .= N2Html::script(N2Uri::pathToUri($combinedFile, $needProtocol), true) . "\n";
                 }
             } else {
                 foreach ($this->getFiles() AS $file) {
                     if (substr($file, 0, 2) == '//') {
                         $output .= N2Html::script($file, true) . "\n";
                     } else {
-                        $output .= N2Html::script(N2Uri::pathToUri($file, false) . '?' . filemtime($file), true) . "\n";
+                        $output .= N2Html::script(N2Uri::pathToUri($file, $needProtocol) . '?' . filemtime($file), true) . "\n";
                     }
                 }
             }

@@ -31,8 +31,9 @@ class N2 {
                 if (N2Settings::get('curl-clean-proxy', 0)) {
                     curl_setopt($ch, CURLOPT_PROXY, '');
                 }
-                $data = curl_exec($ch);
-                if (curl_errno($ch) == 60) {
+                $data        = curl_exec($ch);
+                $errorNumber = curl_errno($ch);
+                if ($errorNumber == 60 || $errorNumber == 77) {
                     curl_setopt($ch, CURLOPT_CAINFO, N2LIBRARY . '/cacert.pem');
                     $data = curl_exec($ch);
                 }

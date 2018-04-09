@@ -4,13 +4,16 @@ Donate link: https://gumroad.com/l/rWLrL
 Tags: social, bookmarks, bookmarking, Hatena, Twitter, Facebook, Tumblr, Google Bookmark, Delicious, Digg, reddit, LinkedIn, Instapaper, StumbleUpon, mixi, gree, atode, toread, line, pocket, Pinterest
 Requires at least: 4.0.0
 Tested up to: 4.7
-Stable tag: 2.0.2
+Stable tag: 2.0.7
 
 This plugin inserts social share links at the top or bottom of each post.
 
 == Description ==
 
-This plugin inserts social share links at the top or bottom of each post.
+This plugin inserts social share links at the top or bottom of each post. 
+For theme developers, social share links can be added by PHP code or by using shortcode. Check documentation for this use-case.
+
+This plugin documentation can be found [here](https://github.com/utahta/WP-Social-Bookmarking-Light/wiki).
 
 This is the list of used social sites:
 
@@ -48,6 +51,21 @@ This is the list of used social sites:
 2. Admin settings page.
 
 == Changelog ==
+
+= 2.0.7 =
+* Fixed: google plus option [#60](https://github.com/utahta/WP-Social-Bookmarking-Light/pull/60)
+
+= 2.0.6 =
+* Fixed: pinterest behavior [#59](https://github.com/utahta/WP-Social-Bookmarking-Light/pull/59)
+
+= 2.0.5 =
+* Added: wsbl_embed shortcode [#56](https://github.com/utahta/WP-Social-Bookmarking-Light/pull/56)
+
+= 2.0.4 =
+* minimum fix
+
+= 2.0.3 =
+* Added: a new line button design [#53](https://github.com/utahta/WP-Social-Bookmarking-Light/pull/53)
 
 = 2.0.2 =
 * Added: iframe option to twitter [#52](https://github.com/utahta/WP-Social-Bookmarking-Light/pull/52)

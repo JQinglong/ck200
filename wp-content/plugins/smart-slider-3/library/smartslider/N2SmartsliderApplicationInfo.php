@@ -107,7 +107,7 @@ class N2SmartsliderApplicationInfo extends N2ApplicationInfo {
                     size: [
                         600, 460
                     ],
-                    title: n2_(\'' . n2_('Join the Nextend community!') . '\'),
+                    title: n2_(\'' . n2_('Join the Smart Slider community!') . '\'),
                     back: false,
                     close: true,
                     content: \'<form class="n2-form"></form>\',
@@ -117,7 +117,7 @@ class N2SmartsliderApplicationInfo extends N2ApplicationInfo {
                             var form = this.content.find(\'.n2-form\');
 
                             form.append(\'<img src="' . N2ImageHelper::fixed('$ss$/admin/images/free/newsletter.jpg') . '" />\');
-                            form.append(this.createHeading("Join more than 12,000 subscribers and get access to the latest Sample Sliders, Tip & tricks and other exclusive contents directly to your inbox!"));
+                            form.append(this.createHeading("Join more than 15,000 subscribers and get access to the latest Sample Sliders, Tip & tricks and other exclusive contents directly to your inbox!"));
 
                             form.append(\'<div class="n2-input-button"><input type="email" id="EMAIL" name="EMAIL" value="" /><a href="#" class="n2-button n2-button-normal n2-button-l n2-radius-s n2-button-green n2-uc n2-h4">Get Free Sliders</a></div>\');
 

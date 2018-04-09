@@ -1,8 +1,7 @@
 <?php
 N2Loader::import("libraries.slider.abstract", "smartslider");
 
-class N2SmartsliderGeneratorModel extends N2Model
-{
+class N2SmartsliderGeneratorModel extends N2Model {
 
     private static $layouts = array(
         'image'          => '{"title":"{title}","description":"","thumbnail":"{thumbnail}","backgroundColor":"ffffff00","backgroundImage":"{image}","backgroundAlt":"","backgroundtitle":"","backgroundMode":"default","backgroundVideoMp4":"","backgroundVideoMuted":"1","backgroundVideoLoop":"1","backgroundVideoMode":"fill","link":"|*|_self","slidedurationin":"0","slidedurationout":"0","slide":[]}',
@@ -123,6 +122,22 @@ class N2SmartsliderGeneratorModel extends N2Model
                 ));
                 break;
 
+            case 'vimeo':
+                $slide->set('title', "{title}")
+                      ->set('description', "{description}")
+                      ->set('thumbnail', "{image200x150/1}");
+
+                new N2SmartSliderItemHelper($slide, 'vimeo', array(
+                    'desktopportraitwidth'  => '100%',
+                    'desktopportraitheight' => '100%',
+                    'desktopportraitleft'   => 0,
+                    'desktopportraittop'    => 0
+                ), array(
+                    'vimeourl' => '{url}',
+                    'image'    => ''
+                ));
+                break;
+
             case 'social_post':
                 $slide->set('title', "{title}")
                       ->set('description', "{description}")
@@ -163,6 +178,7 @@ class N2SmartsliderGeneratorModel extends N2Model
                     'published'   => 1
                 );
         }
+
         return $slide->toArray();
     }
 
@@ -342,6 +358,7 @@ class N2SmartsliderGeneratorModel extends N2Model
     public function duplicate($id) {
         $generatorRow = $this->get($id);
         $generatorId  = $this->_create($generatorRow['type'], $generatorRow['group'], $generatorRow['params']);
+
         return $generatorId;
     }
 

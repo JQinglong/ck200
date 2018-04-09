@@ -43,8 +43,9 @@ abstract class N2SmartSliderType {
 
     protected function openSliderElement() {
         return N2Html::openTag('div', array(
-                'id'    => $this->slider->elementId,
-                'class' => 'n2-ss-slider n2-ow n2-has-hover n2notransition ' . $this->getSliderClasses(),
+                'id'           => $this->slider->elementId,
+                'data-creator' => 'Smart Slider 3',
+                'class'        => 'n2-ss-slider n2-ow n2-has-hover n2notransition ' . $this->getSliderClasses(),
 
             ) + $this->getFontSizeAttributes());
     }

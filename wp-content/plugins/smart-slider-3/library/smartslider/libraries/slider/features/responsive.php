@@ -395,7 +395,7 @@ class N2SmartSliderFeatureResponsive {
         }
 
         $properties['responsive'] = array(
-            'desktop' => N2Platform::$isAdmin ? 1 : $this->desktop,
+            'desktop' => N2SS3::$forceDesktop ? 1 : $this->desktop,
             'tablet'  => $this->tablet,
             'mobile'  => $this->mobile,
 
@@ -429,10 +429,6 @@ class N2SmartSliderFeatureResponsive {
             'sliderWidthToDevice'    => $this->sliderWidthToDevice,
 
             'basedOn'                    => $this->basedOn,
-            'tabletPortraitScreenWidth'  => $this->tabletPortraitScreenWidth,
-            'mobilePortraitScreenWidth'  => $this->mobilePortraitScreenWidth,
-            'tabletLandscapeScreenWidth' => $this->tabletLandscapeScreenWidth,
-            'mobileLandscapeScreenWidth' => $this->mobileLandscapeScreenWidth,
             'orientationMode'            => $this->orientationMode,
 
             'scrollFix'          => intval($this->slider->params->get('scroll-fix', 0)),

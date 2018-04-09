@@ -3,8 +3,8 @@ Contributors: Yuichiro ABE
 Donate link:
 Tags: contact, form, contact form
 Requires at least: 3.8
-Tested up to: 4.7.5
-Stable tag: 4.8
+Tested up to: 4.9.3
+Stable tag: 5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: contact-form-7-add-confirm
@@ -141,6 +141,12 @@ An answer to that question.
  Contact Form 7 ver.4.6に対応し
  WPCF7_FormTagに対応
 
-== Upgrade notice ==
 4.8
  Contact Form 7 ver.4.8に対応
+
+5.0
+ Contact Form 7 ver.5.0に対応
+ 
+== Upgrade notice ==
+5.1
+ jQuery3.0対応としてscripts.js の size() を length に変更

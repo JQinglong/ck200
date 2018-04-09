@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
 }
 
 function Nextend_ET_Builder_Module_Smart_Slider_Field() {
-    $output = sprintf('<input type="button" class="button button-upload" value="%1$s" onclick="return NextendSmartSliderSelectModal(jQuery(this).siblings(\'.regular-text\'));" />', n2_('Select Slider'));
+    $output = sprintf('<input type="button" class="button button-upload" value="%1$s" onclick="' . SmartSlider3::sliderSelectAction("jQuery(this).siblings('.regular-text')") . 'return false;" />', n2_('Select Slider'));
 
     return $output;
 }
@@ -66,11 +66,14 @@ class Nextend_ET_Builder_Module_Smart_Slider extends ET_Builder_Module {
     }
 
     function shortcode_callback($atts, $content = null, $function_name) {
-        $sliderId     = $this->shortcode_atts['slider'];
+        $sliderIdOrAlias     = $this->shortcode_atts['slider'];
         $module_class = '';
         $module_class = ET_Builder_Element::add_module_order_class($module_class, $function_name);
 
-        return '<div class="et_pb_module et-waypoint ' . $module_class . ' et_pb_animation_off">' . do_shortcode('[smartslider3 slider=' . $sliderId . ']') . '</div>';
+        if(!is_numeric($sliderIdOrAlias)){
+	        return '<div class="et_pb_module et-waypoint ' . $module_class . ' et_pb_animation_off">' . do_shortcode('[smartslider3 alias="' . $sliderIdOrAlias . '"]') . '</div>';
+        }
+        return '<div class="et_pb_module et-waypoint ' . $module_class . ' et_pb_animation_off">' . do_shortcode('[smartslider3 slider=' . $sliderIdOrAlias . ']') . '</div>';
     }
 }
 

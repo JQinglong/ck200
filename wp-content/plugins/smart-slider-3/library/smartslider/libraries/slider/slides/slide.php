@@ -35,7 +35,7 @@ class N2SmartSliderSlide {
 
     public $index = -1;
 
-    public $attributes = array(), $containerAttributes = array(
+    public $attributes = array(), $linkAttributes = array(), $containerAttributes = array(
         'class'             => 'n2-ss-layers-container n2-ow',
         'data-csstextalign' => 'center',
         'style'             => ''
@@ -176,32 +176,39 @@ class N2SmartSliderSlide {
         list($url, $target) = (array)N2Parse::parse($this->parameters->getIfEmpty('link', '|*|'));
 
         if (!empty($url) && $url != '#') {
+            $url = $this->fill($url);
+        }
+
+        if (!empty($url) && $url != '#') {
 
             if (empty($target)) {
                 $target = '_self';
             }
 
-            $url = N2ImageHelper::fixed($this->fill($url));
+            $url = N2ImageHelper::fixed($url);
 
-            $this->containerAttributes['onclick'] = '';
+            $this->linkAttributes['onclick'] = '';
             if (strpos($url, 'javascript:') === 0) {
-                $this->containerAttributes['onclick'] = $url;
+                $this->linkAttributes['onclick'] = $url;
             } else {
 
                 N2Loader::import('libraries.link.link');
-                $url = N2LinkParser::parse($url, $this->containerAttributes);
+                $url = N2LinkParser::parse($url, $this->linkAttributes);
 
-                $this->containerAttributes['data-href'] = (N2Platform::$isJoomla ? JRoute::_($url, false) : $url);
-                if (empty($this->containerAttributes['onclick'])) {
+                $this->linkAttributes['data-href'] = (N2Platform::$isJoomla ? JRoute::_($url, false) : $url);
+                if (empty($this->linkAttributes['onclick'])) {
                     if ($target == '_blank') {
-                        $this->containerAttributes['data-n2click'] = "window.open(this.getAttribute('data-href'),'_blank');";
+                        $this->linkAttributes['data-n2click'] = "window.open(this.getAttribute('data-href'),'_blank');";
                     } else {
-                        $this->containerAttributes['data-n2click'] = "window.location=this.getAttribute('data-href')";
+                        $this->linkAttributes['data-n2click'] = "window.location=this.getAttribute('data-href')";
                     }
-                    $this->containerAttributes['data-n2middleclick'] = "window.open(this.getAttribute('data-href'),'_blank');";
+                    $this->linkAttributes['data-n2middleclick'] = "window.open(this.getAttribute('data-href'),'_blank');";
                 }
             }
-            $this->containerAttributes['style'] .= 'cursor:pointer;';
+            if(!isset($this->linkAttributes['style'])){
+	            $this->linkAttributes['style'] = '';
+            }
+            $this->linkAttributes['style'] .= 'cursor:pointer;';
             $this->hasLink = true;
         }
     }
@@ -295,11 +302,14 @@ class N2SmartSliderSlide {
                 $args[$i] = $this->parseVariable($args[$i]);
             }
 
-            return call_user_func_array(array(
-                $this,
-                '_' . $match[3]
-            ), $args);
+            if (method_exists($this, '_' . $match[3])) {
+                return call_user_func_array(array(
+                    $this,
+                    '_' . $match[3]
+                ), $args);
+            }
 
+            return $match[0];
         } else {
             return $this->parseVariable($match[5]);
         }
