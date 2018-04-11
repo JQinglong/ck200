@@ -209,7 +209,6 @@ get_header(); ?>
 	<h2 class="title-border title-bg-line pink mb30">
 		<span>次に覚える曲はこれ！！</span>
 	</h2>
-<?php echo $i+1; ?>
 <?php for($i=0;$i<=2;$i++) { ?>
 	<h3 class="title-underblock custom orange mb30">
 		<span><?php echo $i+1; ?> <?php echo $title_strs[$i]; ?></span>
