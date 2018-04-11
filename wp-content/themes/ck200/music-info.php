@@ -67,10 +67,10 @@ $sql = $wpdb->prepare("SELECT MT.music_nm,MT.cnt_lylics CNT,COUNT( DISTINCT TL.l
  FROM lylics TL
  INNER JOIN musics MT
   ON MT.id = TL.music_id
- LEFT JOIN (SELECT music_id,lylics FROM lylics WHERE music_id=3 GROUP BY music_id,lylics) TL1
+ LEFT JOIN (SELECT music_id,lylics FROM lylics WHERE music_id=%d GROUP BY music_id,lylics) TL1
   ON TL1.lylics = TL.lylics
  LEFT JOIN singers MS ON MT.singer_id = MS.id
-WHERE TL.music_id<>3
+WHERE TL.music_id<>%d
 GROUP BY MT.music_nm,MT.cnt_lylics,CONCAT(LEFT(MT.lylics,20),'...') ,MS.img_url
 ORDER BY (COUNT(DISTINCT TL1.lylics)/COUNT( DISTINCT TL.lylics )) desc
 LIMIT 3 " , $music, $music);
