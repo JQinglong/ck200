@@ -44,7 +44,7 @@ $wpdb->show_errors();
 // 指定された曲の情報
 //$sql = $wpdb->prepare("SELECT p.name, p.price FROM $wpdb->products p WHERE p.name LIKE %s", '%'.$product_name.'%' );
 //$sql = $wpdb->prepare("SELECT MT.TITLE_NM FROM CK200_M_TITLE MT WHERE MT.MUSIC_CD=%s " , $music);
-$sql = $wpdb->prepare("SELECT MT.MUSIC_CD, MT.TITLE_NM, CONCAT(LEFT(MT.LYLICS,20),'...')  LYL
+$sql = $wpdb->prepare("SELECT MT.MUSIC_CD, MT.TITLE_NM, CONCAT(LEFT(MT.LYLICSTR,20),'...')  LYL
 ,IFNULL(SUB.CNT,0) LEFTCNT
 FROM CK200_M_TITLE MT
 LEFT JOIN
@@ -57,7 +57,7 @@ AND TL.LYLICS NOT REGEXP '[0-9]'
 GROUP BY TL.MUSIC_CD
 ) SUB
 ON MT.MUSIC_CD = SUB.MUSIC_CD
-WHERE LENGTH(IFNULL(MT.LYLICS,'')) > 10
+WHERE LENGTH(IFNULL(MT.LYLICSTR,'')) > 10
 ORDER BY IFNULL(SUB.CNT,0)
 LIMIT 10 " , $hsk);
 
@@ -67,7 +67,7 @@ echo $message;
 
 // 6級の場合は難しいチャレンジ曲も紹介
 if ( $hsk == 6) {
-$sql = $wpdb->prepare("SELECT MT.MUSIC_CD, MT.TITLE_NM, CONCAT(LEFT(MT.LYLICS,20),'...')  LYL
+$sql = $wpdb->prepare("SELECT MT.MUSIC_CD, MT.TITLE_NM, CONCAT(LEFT(MT.LYLICSTR,20),'...')  LYL
 ,IFNULL(SUB.CNT,0) LEFTCNT
 FROM CK200_M_TITLE MT
 LEFT JOIN

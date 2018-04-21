@@ -14,6 +14,8 @@
         <li><?= $this->Html->link(__('New Singer'), ['controller' => 'Singers', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Lylics'), ['controller' => 'Lylics', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Lylic'), ['controller' => 'Lylics', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Music Hskcounts'), ['controller' => 'MusicHskcounts', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Music Hskcount'), ['controller' => 'MusicHskcounts', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="musics view large-9 medium-8 columns content">
@@ -41,8 +43,8 @@
         </tr>
     </table>
     <div class="row">
-        <h4><?= __('Lylics') ?></h4>
-        <?= $this->Text->autoParagraph(h($music->lylics)); ?>
+        <h4><?= __('Lylicstr') ?></h4>
+        <?= $this->Text->autoParagraph(h($music->lylicstr)); ?>
     </div>
     <div class="related">
         <h4><?= __('Related Lylics') ?></h4>
@@ -65,6 +67,35 @@
                     <?= $this->Html->link(__('View'), ['controller' => 'Lylics', 'action' => 'view', $lylics->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Lylics', 'action' => 'edit', $lylics->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Lylics', 'action' => 'delete', $lylics->id], ['confirm' => __('Are you sure you want to delete # {0}?', $lylics->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Music Hskcounts') ?></h4>
+        <?php if (!empty($music->music_hskcounts)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Music Id') ?></th>
+                <th scope="col"><?= __('Level') ?></th>
+                <th scope="col"><?= __('Cnt Lylics') ?></th>
+                <th scope="col"><?= __('Cnt Dist') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($music->music_hskcounts as $musicHskcounts): ?>
+            <tr>
+                <td><?= h($musicHskcounts->id) ?></td>
+                <td><?= h($musicHskcounts->music_id) ?></td>
+                <td><?= h($musicHskcounts->level) ?></td>
+                <td><?= h($musicHskcounts->cnt_lylics) ?></td>
+                <td><?= h($musicHskcounts->cnt_dist) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'MusicHskcounts', 'action' => 'view', $musicHskcounts->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'MusicHskcounts', 'action' => 'edit', $musicHskcounts->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'MusicHskcounts', 'action' => 'delete', $musicHskcounts->id], ['confirm' => __('Are you sure you want to delete # {0}?', $musicHskcounts->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

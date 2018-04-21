@@ -8,12 +8,14 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $music_nm
+ * @property string $lylicstr
  * @property int $singer_id
  * @property int $cnt_lylics
  * @property int $cnt_dist
  *
- * @property \App\Model\Entity\Lylic[] $lylics
  * @property \App\Model\Entity\Singer $singer
+ * @property \App\Model\Entity\Lylic[] $lylics
+ * @property \App\Model\Entity\MusicHskcount[] $music_hskcounts
  */
 class Music extends Entity
 {

@@ -36,7 +36,7 @@ global $wpdb;
 $wpdb->show_errors();
 	
 $sql = $wpdb->prepare("SELECT MT.music_nm, MT.cnt_lylics CNT, COUNT( DISTINCT TL.lylics ) DISTCNT
-, CONCAT( LEFT( MT.lylics, 20 ) ,  '...' ) LYL, MS.img_url
+, CONCAT( LEFT( MT.LYLICSTR, 20 ) ,  '...' ) LYL, MS.img_url
 FROM lylics TL
 INNER JOIN musics MT ON MT.id = TL.music_id
 LEFT JOIN singers MS ON MT.singer_id = MS.id
@@ -62,7 +62,7 @@ if($rows){
 $sql = $wpdb->prepare("SELECT MT.music_nm,MT.cnt_lylics CNT,COUNT( DISTINCT TL.lylics ) DISTCNT
 ,COUNT(DISTINCT TL1.lylics) INCNT
 ,COUNT(DISTINCT TL1.lylics)/COUNT( DISTINCT TL.lylics )
-,CONCAT(LEFT(MT.lylics,20),'...') LYL
+,CONCAT(LEFT(MT.LYLICSTR,20),'...') LYL
 ,MS.img_url
  FROM lylics TL
  INNER JOIN musics MT
@@ -71,7 +71,7 @@ $sql = $wpdb->prepare("SELECT MT.music_nm,MT.cnt_lylics CNT,COUNT( DISTINCT TL.l
   ON TL1.lylics = TL.lylics
  LEFT JOIN singers MS ON MT.singer_id = MS.id
 WHERE TL.music_id<>%d
-GROUP BY MT.music_nm,MT.cnt_lylics,CONCAT(LEFT(MT.lylics,20),'...') ,MS.img_url
+GROUP BY MT.music_nm,MT.cnt_lylics,CONCAT(LEFT(MT.LYLICSTR,20),'...') ,MS.img_url
 ORDER BY (COUNT(DISTINCT TL1.lylics)/COUNT( DISTINCT TL.lylics )) desc
 LIMIT 3 " , $music, $music);
 

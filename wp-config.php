@@ -26,16 +26,16 @@ if (!isset($_SERVER['APP_ENV']) || $_SERVER['APP_ENV'] !== 'heroku') {
 
     // ** MySQL settings - You can get this info from your web host ** //
     /** The name of the database for WordPress */
-    define('DB_NAME', 'heroku_77f34f9265d6fb8');
+    define('DB_NAME', 'c9');
     
     /** MySQL database username */
-    define('DB_USER', 'b94381fb339fb6');
+    define('DB_USER', 'konno');
     
     /** MySQL database password */
-    define('DB_PASSWORD', 'aba6ba70');
+    define('DB_PASSWORD', '');
     
     /** MySQL hostname */
-    define('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net');
+    define('DB_HOST', 'localhost');
     
     /** Database Charset to use in creating database tables. */
     define('DB_CHARSET', 'utf8');

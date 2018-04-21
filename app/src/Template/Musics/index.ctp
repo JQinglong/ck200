@@ -11,6 +11,8 @@
         <li><?= $this->Html->link(__('New Singer'), ['controller' => 'Singers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Lylics'), ['controller' => 'Lylics', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Lylic'), ['controller' => 'Lylics', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Music Hskcounts'), ['controller' => 'MusicHskcounts', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Music Hskcount'), ['controller' => 'MusicHskcounts', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="musics index large-9 medium-8 columns content">

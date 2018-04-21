@@ -37,7 +37,7 @@ class MusicsController extends AppController
     public function view($id = null)
     {
         $music = $this->Musics->get($id, [
-            'contain' => ['Singers', 'Lylics']
+            'contain' => ['Singers', 'Lylics', 'MusicHskcounts']
         ]);
 
         $this->set('music', $music);
@@ -80,15 +80,61 @@ class MusicsController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $music = $this->Musics->patchEntity($music, $this->request->data);
+            
+            //自動計算項目のセット
+            $replacedLylicstr = str_replace(array("\r\n", "\n", "\r"), '', $music->lylicstr);
+            $music->cnt_lylics = mb_strlen ($replacedLylicstr);
+            $music->cnt_dist = count(array_unique(preg_split("//u", $replacedLylicstr, -1, PREG_SPLIT_NO_EMPTY))) ;
+            
             if ($this->Musics->save($music)) {
                 $this->Flash->success(__('The music has been saved.'));
+
+                //lylicsも更新(DEL-INS)
+                //DEL
+                $this->loadModel('Lylics');
+                $this->Lylics->deleteAll([
+                                'music_id' => $id
+                            ]);
+                //INS
+                $i = 0;
+                foreach(preg_split("//u", $replacedLylicstr, -1, PREG_SPLIT_NO_EMPTY) as $value){
+                    $lylic = $this->Lylics->newEntity();
+                    $lylic->music_id = $id;
+                    $lylic->ord = $i;
+                    $lylic->lylics = $value;
+
+                    if ($this->Lylics->save($lylic)) {
+                        //$this->Flash->success(__('The lylic has been saved.'));
+                    }
+                    $i++;
+                }
+                //lylics更新End
+                
+                //music_hskcountsも更新
+                
+                //music_hskcounts更新End
+
+
 
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The music could not be saved. Please, try again.'));
+            
+
+            
         }
-        $singers = $this->Musics->Singers->find('list', ['limit' => 200]);
-        $this->set(compact('music', 'singers'));
+
+        //プルダウンに名称を表示するように変更
+        //$singers = $this->Musics->Singers->find('list', ['limit' => 200]);
+
+        $singersQuery = $this->Musics->Singers->find();
+        $singersResults = $singersQuery
+            ->select(['id', 'singer_nm'])
+            ->combine('id', 'singer_nm')
+            ->toArray();
+        //$this->set(compact('music', 'singers'));
+        $this->set(compact('music', 'singersResults'));
+
         $this->set('_serialize', ['music']);
     }
 

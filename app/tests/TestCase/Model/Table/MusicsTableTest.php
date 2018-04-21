@@ -26,7 +26,8 @@ class MusicsTableTest extends TestCase
     public $fixtures = [
         'app.musics',
         'app.singers',
-        'app.lylics'
+        'app.lylics',
+        'app.music_hskcounts'
     ];
 
     /**

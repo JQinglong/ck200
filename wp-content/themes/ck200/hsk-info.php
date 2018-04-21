@@ -57,7 +57,7 @@ $wpdb->show_errors();
 // WHERE LENGTH(IFNULL(MT.LYLICS,'')) > 10
 // ORDER BY IFNULL(SUB.CNT,0)
 // LIMIT 10 " , $hsk);
-$sql = $wpdb->prepare("SELECT MT.id, MT.music_nm TITLE_NM, CONCAT(LEFT(MT.lylics,20),'...')  LYL
+$sql = $wpdb->prepare("SELECT MT.id, MT.music_nm TITLE_NM, CONCAT(LEFT(MT.lylicstr,20),'...')  LYL
 ,IFNULL(MT.cnt_lylics,0) M_CNT
 ,IFNULL(MT.cnt_dist,0) M_DISTCNT
 ,IFNULL(MC.cnt_lylics,0) CNT
@@ -67,7 +67,7 @@ FROM musics MT
 LEFT JOIN music_hskcounts MC
 ON MT.id = MC.music_id
 AND MC.level = %d
-WHERE LENGTH(IFNULL(MT.lylics,'')) > 10
+WHERE LENGTH(IFNULL(MT.lylicstr,'')) > 10
 AND IFNULL(MT.cnt_dist,0) > 0
 ORDER BY (IFNULL(MT.cnt_dist,0) - IFNULL(MC.cnt_dist,0))
 LIMIT 10
@@ -79,7 +79,7 @@ echo $message;
 
 // 6級の場合は難しいチャレンジ曲も紹介
 if ( $hsk == 6) {
-$sql = $wpdb->prepare("SELECT MT.MUSIC_CD, MT.TITLE_NM, CONCAT(LEFT(MT.LYLICS,20),'...')  LYL
+$sql = $wpdb->prepare("SELECT MT.MUSIC_CD, MT.TITLE_NM, CONCAT(LEFT(MT.lylicstr,20),'...')  LYL
 ,IFNULL(SUB.CNT,0) LEFTCNT
 FROM CK200_M_TITLE MT
 LEFT JOIN
@@ -92,7 +92,7 @@ AND TL.LYLICS NOT REGEXP '[0-9]'
 GROUP BY TL.MUSIC_CD
 ) SUB
 ON MT.MUSIC_CD = SUB.MUSIC_CD
-WHERE LENGTH(IFNULL(MT.LYLICS,'')) > 10
+WHERE LENGTH(IFNULL(MT.lylicstr,'')) > 10
 ORDER BY IFNULL(SUB.CNT,0) DESC
 LIMIT 10 " , $hsk);
 

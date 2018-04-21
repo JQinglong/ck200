@@ -66,8 +66,8 @@ class MusicsTable extends Table
             ->notEmpty('music_nm');
 
         $validator
-            ->requirePresence('lylics', 'create')
-            ->notEmpty('lylics');
+            ->requirePresence('lylicstr', 'create')
+            ->notEmpty('lylicstr');
 
         $validator
             ->integer('cnt_lylics')

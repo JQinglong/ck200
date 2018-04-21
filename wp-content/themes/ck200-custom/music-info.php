@@ -48,7 +48,7 @@ $act = isset($_POST["act"]) ? intval($_POST["act"]) : 1;
     //$sql = $wpdb->prepare("SELECT p.name, p.price FROM $wpdb->products p WHERE p.name LIKE %s", '%'.$product_name.'%' );
     //$sql = $wpdb->prepare("SELECT MT.TITLE_NM FROM CK200_M_TITLE MT WHERE MT.MUSIC_CD=%s " , $music);
     $sql = $wpdb->prepare("SELECT MT.TITLE_NM,COUNT(TL.LYLICS) CNT,COUNT( DISTINCT TL.LYLICS ) DISTCNT
-    ,CONCAT(LEFT(MT.LYLICS,20),'...') LYL
+    ,CONCAT(LEFT(MT.LYLICSTR,20),'...') LYL
     ,MS.IMG_URL
 	 FROM CK200_T_LYLICS TL
 	 INNER JOIN CK200_M_TITLE MT ON MT.MUSIC_CD = TL.MUSIC_CD
@@ -73,7 +73,7 @@ $act = isset($_POST["act"]) ? intval($_POST["act"]) : 1;
 	//マッチ情報1
     $sql = $wpdb->prepare("SELECT MT.TITLE_NM,COUNT(TL.LYLICS) CNT,COUNT( DISTINCT TL.LYLICS ) DISTCNT
 	,COUNT(DISTINCT TL1.LYLICS) INCNT
-	,CONCAT(LEFT(MT.LYLICS,20),'...') LYL
+	,CONCAT(LEFT(MT.LYLICSTR,20),'...') LYL
 	,MS.IMG_URL
 	 FROM CK200_T_LYLICS TL
 	 INNER JOIN CK200_M_TITLE MT
@@ -100,7 +100,7 @@ $act = isset($_POST["act"]) ? intval($_POST["act"]) : 1;
 	//マッチ情報2
     $sql = $wpdb->prepare("SELECT MT.TITLE_NM,COUNT(TL.LYLICS) CNT,COUNT( DISTINCT TL.LYLICS ) DISTCNT
 	,COUNT(DISTINCT TL1.LYLICS) INCNT
-	,CONCAT(LEFT(MT.LYLICS,20),'...') LYL
+	,CONCAT(LEFT(MT.LYLICSTR,20),'...') LYL
 	,MS.IMG_URL
 	 FROM CK200_T_LYLICS TL
 	 INNER JOIN CK200_M_TITLE MT
@@ -127,7 +127,7 @@ $act = isset($_POST["act"]) ? intval($_POST["act"]) : 1;
 	//マッチ情報3
     $sql = $wpdb->prepare("SELECT MT.TITLE_NM,COUNT(TL.LYLICS) CNT,COUNT( DISTINCT TL.LYLICS ) DISTCNT
 	,COUNT(DISTINCT TL1.LYLICS) INCNT
-	,CONCAT(LEFT(MT.LYLICS,20),'...') LYL
+	,CONCAT(LEFT(MT.LYLICSTR,20),'...') LYL
 	,MS.IMG_URL
 	 FROM CK200_T_LYLICS TL
 	 INNER JOIN CK200_M_TITLE MT
