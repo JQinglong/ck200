@@ -8,3 +8,4 @@ Template:       islemag
 */
 
 @import url('../islemag/style.css');
+@import url('css/jquery.bootgrid.min.css');

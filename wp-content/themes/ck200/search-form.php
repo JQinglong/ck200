@@ -220,6 +220,14 @@ if ( ! empty( $archive_content_classes ) ) {
 	</div>
 </form>
 
+<h2 class="title-border title-bg-line pink mb30">
+	<span>200曲一覧</span>
+</h2>
+<div class="btn-area">
+	<button class="btn btn-success" onClick="location.href='basedata/'">　表示　<i class="fa fa-arrow-circle-right"></i></button>
+</div>
+
+
 </div><!-- #page-content -->
 
 </main><!-- #main -->
