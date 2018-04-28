@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
 
 /**
  * Musics Controller
@@ -111,7 +112,29 @@ class MusicsController extends AppController
                 //lylics更新End
                 
                 //music_hskcountsも更新
-                
+                //DEL
+                $this->loadModel('MusicHskcounts');
+                $this->MusicHskcounts->deleteAll([
+                                'music_id' => $id
+                            ]);
+                //INS
+                $query  = "INSERT INTO music_hskcounts 
+                    (music_id, level, cnt_lylics, cnt_dist)
+                    select lylics.music_id,hskwords.level,count(lylics),count(distinct lylics)
+                    from lylics
+                    inner join hskwords
+                    on hskwords.word = lylics.lylics
+                    and lylics.music_id = ?
+                    group by lylics.music_id,hskwords.level
+                     ";
+                $conn = ConnectionManager::get('default');
+                //$result = $conn->execute($query,$id);
+                if (!$conn->execute($query,[$id])) {
+                    $this->Flash->error(__('The music_hskcounts could not be saved. Please, try again.'));
+                } else {
+                    $this->Flash->success(__('The music_hskcounts has been saved.'));
+                }
+                //$result = $this->MusicHskcounts->query($query, $id, false);//cake2
                 //music_hskcounts更新End
 
 
